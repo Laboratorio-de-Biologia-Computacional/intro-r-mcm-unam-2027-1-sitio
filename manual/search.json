@@ -1,0 +1,495 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introducción a R",
+    "section": "",
+    "text": "Presentación\nEste es el manual del curso Introducción a R del Programa de Maestría y Doctorado en Ciencias Médicas, Odontológicas y de la Salud de la UNAM, semestre 2027-1.\nLas diapositivas son para la clase; este manual es para después: tiene la explicación completa, los ejemplos con su salida y las referencias.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#cómo-usarlo",
+    "href": "index.html#cómo-usarlo",
+    "title": "Introducción a R",
+    "section": "Cómo usarlo",
+    "text": "Cómo usarlo\nCada capítulo corresponde a una sesión. Puedes leerlo en orden o entrar directo al tema que necesitas desde el buscador.\nLos bloques de código se pueden copiar con el botón de la esquina y pegar directamente en RStudio.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#dónde-vamos-a-trabajar",
+    "href": "index.html#dónde-vamos-a-trabajar",
+    "title": "Introducción a R",
+    "section": "Dónde vamos a trabajar",
+    "text": "Dónde vamos a trabajar\nEn este curso no instalas nada: usamos Posit Cloud, que es RStudio dentro del navegador. Ver el anexo de Posit Cloud para crear tu cuenta.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "index.html#licencia-y-cita",
+    "href": "index.html#licencia-y-cita",
+    "title": "Introducción a R",
+    "section": "Licencia y cita",
+    "text": "Licencia y cita\nEl material se puede compartir y adaptar con atribución y sin uso comercial (CC BY-NC 4.0). Si lo reutilizas, cita como se indica en el archivo CITATION.cff del repositorio.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html",
+    "href": "00-encuadre.html",
+    "title": "\n1  Encuadre\n",
+    "section": "",
+    "text": "1.1 Ciencia de datos\nEste capítulo es la versión escrita del deck slides/00-encuadre.qmd. Su contenido proviene de la clase 0 de la edición anterior del curso, reorganizado para leerse fuera del aula.\nLa ciencia de datos es un campo interdisciplinario que usa métodos, procesos, algoritmos y sistemas científicos para extraer conocimiento de datos, estén organizados en una tabla o no.\nLa forma más común de describirla es como la intersección de tres círculos: matemáticas y estadística, cómputo, y conocimiento del dominio.\nEse tercer círculo es el que importa aquí. En biología y salud, el conocimiento del dominio es el que tú ya traes: es la parte que no se aprende en un curso de programación.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html#ciencia-de-datos",
+    "href": "00-encuadre.html#ciencia-de-datos",
+    "title": "\n1  Encuadre\n",
+    "section": "",
+    "text": "Figura 1.1: Ciencia de datos según el NIST Big Data Working Group\n\n\n\n\n\n\n\n\nFigura 1.2: El mismo diagrama, aplicado a biología",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html#qué-es-r",
+    "href": "00-encuadre.html#qué-es-r",
+    "title": "\n1  Encuadre\n",
+    "section": "\n1.2 Qué es R",
+    "text": "1.2 Qué es R\nR es un ambiente de software libre para cómputo estadístico y gráficos. Compila y corre en Windows, macOS y Linux.\nLo desarrollaron personas expertas en estadística a partir del lenguaje S, creado por John Chambers y colegas en los Laboratorios Bell (hoy Lucent Technologies).\n\n1.2.1 Ventajas\n\nEs libre: no depende de una licencia que se venza ni de un presupuesto.\nLas figuras y gráficos que produce son de calidad de publicación.\nSe extiende instalando paquetes.\nFue hecho por y para gente que analiza datos, no adaptado desde otro fin.\n\n1.2.2 Desventajas\n\nRequiere tiempo de entrenamiento: para personalizar un resultado hay que conocer el lenguaje.\nAlgunos paquetes están mal documentados, abandonados, o no son la mejor herramienta para el problema.\nCiertas tareas se resuelven más fácil en otro lenguaje.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html#qué-es-rstudio",
+    "href": "00-encuadre.html#qué-es-rstudio",
+    "title": "\n1  Encuadre\n",
+    "section": "\n1.3 Qué es RStudio",
+    "text": "1.3 Qué es RStudio\nUn ambiente de desarrollo integrado (IDE): consola, editor, herramientas gráficas y manejo del área de trabajo en una sola ventana.\nR es el motor; RStudio es el tablero desde el que lo manejas. Puedes usar R sin RStudio, pero es más incómodo.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html#dónde-vamos-a-trabajar",
+    "href": "00-encuadre.html#dónde-vamos-a-trabajar",
+    "title": "\n1  Encuadre\n",
+    "section": "\n1.4 Dónde vamos a trabajar",
+    "text": "1.4 Dónde vamos a trabajar\nEn este curso no instalas nada. Usamos Posit Cloud: el mismo RStudio, corriendo en un servidor en vez de en tu computadora. Se abre en el navegador con una cuenta gratuita.\nLa razón es práctica. Instalar R y RStudio en cada computadora convierte la primera sesión en soporte técnico —versiones distintas, permisos de administrador, antivirus— y se va la clase sin haber escrito una línea de R. En la nube todas trabajamos sobre el mismo R, con los mismos paquetes, y un problema se resuelve una sola vez.\nNo es una versión reducida: lo que aprendas aquí funciona igual el día que instales R en tu máquina.\nCómo crear la cuenta y qué esperar del plan gratuito: ver el anexo de Posit Cloud.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html#por-qué-escribir-el-análisis",
+    "href": "00-encuadre.html#por-qué-escribir-el-análisis",
+    "title": "\n1  Encuadre\n",
+    "section": "\n1.5 Por qué escribir el análisis",
+    "text": "1.5 Por qué escribir el análisis\nEn una hoja de cálculo, las operaciones se hacen a mano y no queda registro de ellas. Seis meses después nadie —ni tú— puede decir con certeza qué celdas se tocaron.\nEn R, cada paso se escribe como una instrucción, y el archivo de instrucciones es el registro del análisis. Si un revisor pregunta cómo obtuviste una cifra, la respuesta es ese archivo: se vuelve a correr y produce el mismo resultado.\nEsa propiedad se llama reproducibilidad y es la razón de fondo de este curso.\n\n1.5.1 Un primer ejemplo\n\nedades &lt;- c(34, 41, 28, 55, 47)\nmean(edades)\n\n[1] 41\n\n\nLa primera línea guarda cinco edades en un objeto llamado edades. La segunda pide su promedio.\nEl nombre va en plural a propósito: guarda cinco valores, no uno. En la sesión 01 se usa edad para un solo número y edades para el vector, y conviene que diga lo mismo desde aquí.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html#de-qué-trata-el-curso",
+    "href": "00-encuadre.html#de-qué-trata-el-curso",
+    "title": "\n1  Encuadre\n",
+    "section": "\n1.6 De qué trata el curso",
+    "text": "1.6 De qué trata el curso\nUn curso introductorio para aprender a programar en R y adquirir nociones de cómo analizar tus propios datos. No se requieren conocimientos previos de programación.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html#evaluación",
+    "href": "00-encuadre.html#evaluación",
+    "title": "\n1  Encuadre\n",
+    "section": "\n1.7 Evaluación",
+    "text": "1.7 Evaluación\n\n\nComponente\nPeso\n\n\n\nTareas en DataCamp\n20 %\n\n\nPrimer examen\n25 %\n\n\nSegundo examen\n25 %\n\n\nProyecto final en R\n30 %\n\n\n\nAsistencia mínima: 80 %.\n\n\n\n\n\n\nCriterios heredados de la edición anterior del curso. Se confirman para el semestre 2027-1 en docs/programa-operativo/.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html#material-de-apoyo",
+    "href": "00-encuadre.html#material-de-apoyo",
+    "title": "\n1  Encuadre\n",
+    "section": "\n1.8 Material de apoyo",
+    "text": "1.8 Material de apoyo\nAdemás del material de este repositorio, el curso ha usado DataCamp a través del programa DataCamp for the Classroom, que da acceso completo a la plataforma mientras el curso esté inscrito.\nLecturas de apoyo sobre qué es la ciencia de datos y cómo aprender R:\n\nhttps://www.datacamp.com/es/blog/what-is-data-science-the-definitive-guide\nhttps://www.datacamp.com/blog/learn-r",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "00-encuadre.html#sesión-de-r",
+    "href": "00-encuadre.html#sesión-de-r",
+    "title": "\n1  Encuadre\n",
+    "section": "\n1.9 Sesión de R",
+    "text": "1.9 Sesión de R\nAl cerrar cada análisis conviene registrar con qué versiones se corrió. Es lo que permite explicar, meses después, por qué un resultado cambió:\n\nsessioninfo::session_info()",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Encuadre</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html",
+    "href": "01-primeros-pasos-en-r.html",
+    "title": "2  Primeros pasos en R",
+    "section": "",
+    "text": "2.1 El caso: dieciocho divisiones a mano\nTema 01 · unidad teórico-práctica\nTienes los datos epidemiológicos de seis estados y te piden tres indicadores de cada uno: tasa de incidencia, prevalencia y letalidad. Son tres divisiones por estado. Dieciocho en total.\nCon una calculadora se hacen en diez o quince minutos, si no te equivocas. El problema no es ese. El problema llega el mes siguiente, cuando alguien manda la corrección de las cifras de dos estados y hay que rehacerlo todo. Y otra vez en abril.\nEse es el trabajo que R elimina, y por eso el curso abre aquí y no con 1 + 1.\nEs el argumento del curso entero y conviene tenerlo presente en las tres sesiones: no venimos a aprender una herramienta de cálculo, venimos a dejar constancia de cómo se calculó.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html#el-caso-dieciocho-divisiones-a-mano",
+    "href": "01-primeros-pasos-en-r.html#el-caso-dieciocho-divisiones-a-mano",
+    "title": "2  Primeros pasos en R",
+    "section": "",
+    "text": "ImportanteLo que hace distinto a R\n\n\n\nUna calculadora te da el resultado. R te deja el procedimiento escrito.\nUn procedimiento escrito se vuelve a correr, se revisa, se corrige y se le manda a alguien más. Un resultado, no.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html#la-consola-el-script-y-el-entorno",
+    "href": "01-primeros-pasos-en-r.html#la-consola-el-script-y-el-entorno",
+    "title": "2  Primeros pasos en R",
+    "section": "2.2 La consola, el script y el entorno",
+    "text": "2.2 La consola, el script y el entorno\nAl abrir RStudio aparecen cuatro paneles. Hoy solo importan dos.\n\n\n\n\n\n\n\n\nPanel\nQué es\nPara qué\n\n\n\n\nConsola\ndonde R contesta\nprobar\n\n\nEditor\ndonde escribes el archivo .R\nguardar\n\n\nEntorno\nlo que R tiene en memoria\nver qué existe\n\n\nArchivos / Gráficas / Ayuda\nel resto\nmirar la ayuda y las figuras\n\n\n\nR y RStudio no son lo mismo. R es el lenguaje y el intérprete; RStudio es la ventana desde la que se le habla. Fuera de este curso se instalan por separado y en ese orden; aquí los dos vienen ya montados en Posit Cloud (ver el anexo de Posit Cloud).\nLa diferencia entre los dos primeros paneles es la que ordena todo lo demás: lo que escribes en la consola se ejecuta y se pierde; lo que escribes en el script se guarda y se puede volver a correr entero.\n\n\n\n\n\n\nImportanteLa regla de la primera sesión\n\n\n\nSe prueba en la consola, se guarda en el script. Todo lo que quieras volver a usar la semana que viene tiene que acabar en un archivo .R.\n\n\nEl error de la primera semana casi nunca es de sintaxis: es haber hecho todo el trabajo en la consola y cerrar RStudio. El atajo que evita eso es Ctrl+Enter (Cmd+Enter en Mac), que manda al intérprete la línea del script donde está el cursor.\n\n2.2.1 La primera línea\n3 + 4\n#&gt; [1] 7\nEl [1] no es parte del resultado: es la posición del primer elemento de lo que R está imprimiendo. Con un solo número parece ruido. Va a tener sentido completo en el tema de tipos y estructuras de datos, cuando el resultado tenga cien elementos y R los reparta en varias líneas: cada línea empieza indicando por qué elemento va.\n\n\n2.2.2 Cómo se escriben varios comandos\n# Con salto de línea: lo normal\ncasos &lt;- 125\npoblacion &lt;- 5000\n\n# Con punto y coma: dos en la misma línea\ncasos &lt;- 125; poblacion &lt;- 5000\n\n# Entre llaves: un grupo que se ejecuta junto\n{ casos &lt;- 125; poblacion &lt;- 5000 }\nEl # comenta hasta el final de la línea. El punto y coma existe y se lee peor; sirve para dos asignaciones cortas y emparentadas, no para juntar tres cosas distintas.\nHay un límite que parece curiosidad y explica un error real: un comando introducido en la consola no puede pasar de 4 095 bytes. Si pegas un bloque enorme copiado de internet, se corta. En un script no pasa.\n\n\n2.2.3 No vuelvas a escribir lo mismo\n\n↑ y ↓ en la consola recorren lo que ya escribiste.\nCtrl+↑ (Cmd+↑) abre la lista completa del historial.\nTab completa nombres de funciones, de variables y de rutas de archivo.\n\nDe los tres, el más rentable es Tab. Completa y, de paso, te dice si el objeto existe: si no aparece en la lista, o lo escribiste mal o todavía no lo has creado.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html#pedirle-ayuda-a-r",
+    "href": "01-primeros-pasos-en-r.html#pedirle-ayuda-a-r",
+    "title": "2  Primeros pasos en R",
+    "section": "2.3 Pedirle ayuda a R",
+    "text": "2.3 Pedirle ayuda a R\nR trae su documentación dentro. No hace falta salir a buscar en internet para saber qué argumentos acepta una función.\n\n\n\n\n\n\n\n\nEscribes\nCuándo\nQué te da\n\n\n\n\n?read.table\nsabes el nombre exacto\nla página de ayuda de esa función\n\n\n??solve\nno lo sabes exacto\nbusca en todo lo instalado\n\n\nhelp.search(\"data input\")\nbuscas por tema\nlo mismo que ??, admitiendo frases\n\n\napropos(\"lm\")\nrecuerdas un trozo del nombre\nlos nombres que contienen ese trozo\n\n\nfind(\"lowess\")\nsabes el nombre, no el paquete\nen qué paquete vive\n\n\n\nLa regla corta: una interrogación si sabes el nombre, dos si no.\nhelp.start() abre la documentación completa en el navegador. Es útil el primer día y casi nunca después.\n\n2.3.1 Cómo se lee una página de ayuda\nTodas tienen las mismas secciones, en el mismo orden:\n\n\n\nSección\nQué contesta\n\n\n\n\nDescription\nqué hace\n\n\nUsage\ncómo se llama, con sus argumentos y valores por defecto\n\n\nArguments\nqué significa cada argumento\n\n\nValue\nqué devuelve\n\n\nExamples\ncódigo que puedes copiar y correr\n\n\n\nCasi nadie las lee de arriba abajo. Lo práctico es ir a Usage, saltar a Examples, y volver a Arguments cuando algo no cuadra.\nAprender a leer la ayuda vale más que memorizar veinte funciones: las veinte funciones se buscan, y leer la ayuda no se aprende solo.\n\n\n2.3.2 Ayuda que se ejecuta sola\nexample(sum)\n#&gt; sum&gt; sum(1:5)\n#&gt; [1] 15\n#&gt; sum&gt; sum(1:5, NA)\n#&gt; [1] NA\n#&gt; sum&gt; sum(1:5, NA, na.rm = TRUE)\n#&gt; [1] 15\nexample() corre los ejemplos de la página de ayuda dentro de tu sesión. Este en concreto es un regalo: en tres líneas enseña la función, enseña que un valor faltante (NA) contamina el resultado, y enseña el argumento que lo excluye.\nDe momento basta con esta idea de NA: hay un hueco en los datos, y R prefiere avisarte a inventarse un número. Vuelve en el tema de tipos y estructuras de datos.\n\n\n\n\n\n\nTipEjercicio · encuentra la función\n\n\n\n\n¿En qué paquete vive lowess?\nBusca funciones cuyo nombre contenga mean. ¿Cuántas salen?\nAbre la ayuda de round. ¿Qué hace el argumento digits?\nCorre los ejemplos de round sin copiarlos a mano.\n\nRespuestas: find(\"lowess\") · apropos(\"mean\") · ?round · example(round).\nLa segunda no tiene un número correcto: depende de los paquetes que tengas instalados. Esa es la lección.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html#paquetes",
+    "href": "01-primeros-pasos-en-r.html#paquetes",
+    "title": "2  Primeros pasos en R",
+    "section": "2.4 Paquetes",
+    "text": "2.4 Paquetes\nCuando instalas R ya vienen paquetes de base: base, stats, utils, graphics y algunos más. sum(), c() y mean() viven ahí. El índice completo del paquete base está en la documentación oficial (R Core Team, 2024).\nLo demás lo escribe gente ajena al equipo que desarrolla R y se publica en CRAN, el repositorio oficial. Que R sea extensible por terceros es la razón de que exista ggplot2, que es todo el tema 04.\n\n2.4.1 Instalar no es cargar\ninstall.packages(\"ggplot2\")   # UNA vez, en la vida de tu computadora\nlibrary(ggplot2)              # CADA vez que abres R\ninstall.packages() descarga el paquete a tu disco. library() lo pone disponible en la sesión que tienes abierta. Son dos cosas distintas y hacen falta las dos.\n\n\n\n\n\n\nAdvertenciaEl error de la primera semana\n\n\n\nError in ggplot(...) : could not find function \"ggplot\"\nEl paquete está instalado. Lo que falta es library(ggplot2) en esta sesión.\n\n\nLa analogía que funciona: instalar es comprar el libro; cargar es sacarlo del estante y abrirlo. Comprarlo dos veces no sirve de nada, y tenerlo en el estante tampoco si no lo abres.\nPor eso, en los scripts que se comparten, la línea de install.packages() va comentada: si no, se reinstala el paquete cada vez que alguien corre el archivo.\n# install.packages(\"ggplot2\")   # comentado a propósito\nlibrary(ggplot2)\nd &lt;- data.frame(x = rnorm(100))\nggplot(data = d) + geom_histogram(aes(x = x), bins = 30)\nEsas cuatro líneas generan cien números al azar de una distribución normal, los meten en una tabla y dibujan su histograma. Hoy no hay que entenderlas: hay que ver que funcionan. El resto del curso consiste en entenderlas —la tabla en el tema de tipos y estructuras de datos, y la gráfica en el de ggplot2—.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html#calculadora-asignación-y-nombres",
+    "href": "01-primeros-pasos-en-r.html#calculadora-asignación-y-nombres",
+    "title": "2  Primeros pasos en R",
+    "section": "2.5 Calculadora, asignación y nombres",
+    "text": "2.5 Calculadora, asignación y nombres\n\n2.5.1 Operadores aritméticos\n3 + 4      #&gt; 7\n3 - 4      #&gt; -1\n3 * 4      #&gt; 12\n3 / 4      #&gt; 0.75\n3 ^ 4      #&gt; 81\n7 %/% 2    #&gt; 3     cociente entero\n7 %% 2     #&gt; 1     resto\nLos dos últimos parecen exóticos y no lo son: %% es como se pregunta en R si un número es par (x %% 2 == 0).\n\n\n\n\n\n\nTipEjercicio · piensa un número\n\n\n\nPiensa un número cualquiera. Multiplícalo por 5, súmale 1, multiplica el resultado por 2, réstale 12, divide entre 10 y réstale el número inicial.\nA todo el mundo le da −1.\nNo es magia, es álgebra:\n\\[ \\frac{(5x + 1)\\cdot 2 - 12}{10} - x = \\frac{10x - 10}{10} - x = x - 1 - x = -1 \\]\nEl número que pensaste se cancela. Escribirlo en R con una variable — x &lt;- 7; ((x * 5 + 1) * 2 - 12) / 10 - x — y probar con varios valores es el argumento más corto a favor de escribir el procedimiento y no solo el resultado.\n\n\n\n\n2.5.2 Asignar: guardar para después\nAsignar es guardar un valor en la memoria del ordenador e identificarlo con un nombre, para acceder a él rápidamente después.\nx &lt;- 4    # el operador de R\nx = 5     # también funciona\nLos dos operadores asignan. En R se usa &lt;-, y no es capricho: el signo = ya significa otra cosa dentro de una llamada a función.\nseq(from = 0, to = 1, by = 0.25)\nAhí from = 0 no crea una variable: pasa un argumento con nombre. El operador &lt;- significa siempre lo mismo, en cualquier posición, así que quien lea tu código sabrá sin pensar cuál de las dos cosas está pasando.\nEl atajo de RStudio para escribirlo es Alt+- (Option+- en Mac). Conviene aprenderlo el primer día: si hay que teclear los dos caracteres a mano, se acaba usando =.\nY hay algo que sorprende al principio: asignar no imprime nada. Para ver el contenido de un objeto se escribe su nombre.\ntasa_incidencia &lt;- 25   # no imprime nada\ntasa_incidencia         # ahora sí\n#&gt; [1] 25\nQuien venga de otro lenguaje va a buscar un print(). Existe, y aquí no hace falta.\n\n\n2.5.3 Cómo nombrar una variable\nR distingue mayúsculas de minúsculas: casos, Casos y CASOS son tres variables distintas. Y aun no es aún.\n\n\n\nRegla\nMal\nBien\n\n\n\n\nNo empezar con dígito\n1casos\ncasos1\n\n\nEl _ no va al principio\n_casos\ncasos_marzo\n\n\nTras un . inicial debe ir letra, no dígito\n.1casos\n.casos\n\n\nMáximo 256 bytes\n—\nnombres cortos\n\n\nPortable: solo A-Z a-z 0-9 _ .\npoblación\npoblacion\n\n\n\nLos acentos y las eñes funcionan en muchos sistemas y fallan en otros. Lo peor es que fallan al abrir el archivo en otra computadora, es decir, lejos de donde se cometió el error. Regla de la casa: sin acentos ni eñes en los nombres de objeto; en los comentarios, los que hagan falta.\nMás allá de lo que R acepta, está lo que se entiende:\n# Se entiende hoy y dentro de un mes\ncasos_confirmados &lt;- 125\npoblacion_riesgo  &lt;- 5000\ntasa_incidencia   &lt;- (casos_confirmados / poblacion_riesgo) * 1000\n\n# Se entiende hoy\na &lt;- 125; b &lt;- 5000\nc &lt;- (a / b) * 1000\nEl segundo bloque no está mal: está mudo. Y tiene un problema añadido —c pisa el nombre de la función c(), que es la que más se usa al trabajar con vectores—. Pisar nombres de funciones básicas produce errores que aparecen mucho después y son difíciles de rastrear.\nLa convención de este curso, que es la del material entero: minúsculas y guion bajo (snake_case), sin acentos, con un sustantivo que diga qué guarda. Nada de camelCase.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html#el-caso-resuelto",
+    "href": "01-primeros-pasos-en-r.html#el-caso-resuelto",
+    "title": "2  Primeros pasos en R",
+    "section": "2.6 El caso, resuelto",
+    "text": "2.6 El caso, resuelto\n\n2.6.1 Tasa de incidencia\nMide la aparición de casos nuevos de una enfermedad en una población en riesgo, durante un periodo de tiempo.\n\\[ TI = \\frac{C}{N} \\times k \\]\ndonde \\(C\\) son los casos nuevos en el periodo, \\(N\\) la población en riesgo y \\(k\\) una constante de escala (1 000; 100 000…). La constante solo cambia la unidad en la que se lee el resultado —«por cada mil habitantes», «por cada cien mil»—; no cambia el fenómeno.\ncasos_confirmados &lt;- 125     # casos nuevos\npoblacion_riesgo  &lt;- 5000    # población en riesgo\n\n# Tasa de incidencia por cada 1 000 habitantes\ntasa_incidencia &lt;- (casos_confirmados / poblacion_riesgo) * 1000\n\ntasa_incidencia\n#&gt; [1] 25\nCada elemento de la fórmula tiene una línea de código con su nombre. Los paréntesis no hacen falta —la división y la multiplicación tienen la misma precedencia y se evalúan de izquierda a derecha— y están para que el código se lea como la fórmula.\n\n\n2.6.2 Prevalencia y letalidad\n\\[ P = \\frac{C}{N} \\times 100 \\qquad L = \\frac{D}{C} \\times 100 \\]\nLa prevalencia mide la proporción de personas que tienen la enfermedad en un momento dado: aquí \\(C\\) son todos los casos, nuevos y antiguos. La letalidad mide la proporción de personas con la enfermedad que mueren a causa de ella: su denominador son los casos, no la población.\n\n\n\n\n\n\nAdvertenciaLa confusión clásica\n\n\n\nCambiar el denominador de la letalidad —poner la población en lugar de los casos— cambia el resultado por un factor de veinticinco en el ejemplo de abajo. Y no lanza ningún mensaje: R divide lo que le pongas.\n\n\ncasos_confirmados &lt;- 125    # casos nuevos\npoblacion_riesgo  &lt;- 5000   # personas en riesgo\nmuertes           &lt;- 8      # defunciones entre los casos\ncasos_totales     &lt;- 200    # todos los casos de la enfermedad\n\ntasa_incidencia &lt;- (casos_confirmados / poblacion_riesgo) * 1000\nprevalencia     &lt;- (casos_totales     / poblacion_riesgo) * 100\ntasa_letalidad  &lt;- (muertes           / casos_totales)    * 100\n\ntasa_incidencia\n#&gt; [1] 25\nprevalencia\n#&gt; [1] 4\ntasa_letalidad\n#&gt; [1] 4\nprevalencia y tasa_letalidad valen 4 las dos y no significan lo mismo: el 4 % de la población tiene la enfermedad, y el 4 % de los enfermos murió. La coincidencia es de este ejemplo, no del mundo, y es un buen recordatorio de que el número solo no dice nada: hace falta saber qué se dividió entre qué. Por eso las variables se llaman como se llaman.\n\n\n\n\n\n\nTipEjercicio 1 · cambia los valores\n\n\n\nAsigna otros números de casos confirmados y de población en riesgo, y vuelve a calcular la tasa de incidencia.\nPregunta: ¿qué pasa si la población en riesgo crece y los casos confirmados se quedan igual?\nFíjate en lo que costó: cambiar dos líneas y volver a correr. Eso es exactamente lo que la calculadora no permitía, y es la promesa con la que abrió la sesión.\n\n\n\n\n\n\n\n\nTipEjercicio 2 · dos poblaciones\n\n\n\nAsigna valores para dos poblaciones distintas —poblacion_riesgo1 y poblacion_riesgo2—, calcula la tasa de incidencia en las dos y compáralas.\nPregunta: ¿cuál de las dos poblaciones tiene mayor riesgo relativo?\n\n\nCon dos poblaciones ya hay cuatro variables. Con los seis estados del caso serían doce, y el código dejaría de caber en la pantalla. Esa incomodidad tiene nombre —se llama vector— y ocupa una línea. Es el tema de tipos y estructuras de datos.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html#demostraciones",
+    "href": "01-primeros-pasos-en-r.html#demostraciones",
+    "title": "2  Primeros pasos en R",
+    "section": "2.7 Demostraciones",
+    "text": "2.7 Demostraciones\nR trae demostraciones que enseñan de lo que es capaz sin que haya que escribir nada:\ndemo(persp)      # superficies en perspectiva\ndemo(graphics)   # el repertorio de gráficos base\ndemo(Hershey)    # tipografías vectoriales\ndemo(plotmath)   # fórmulas matemáticas dentro de una gráfica\nNo entran en el examen de nada. Sirven para ver el techo de la herramienta el primer día, que es cuando más falta hace.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html#lo-que-te-llevas",
+    "href": "01-primeros-pasos-en-r.html#lo-que-te-llevas",
+    "title": "2  Primeros pasos en R",
+    "section": "2.8 Lo que te llevas",
+    "text": "2.8 Lo que te llevas\n\nSe prueba en la consola, se guarda en el script.\nUna interrogación si sabes el nombre; dos si no.\ninstall.packages() una vez; library() cada sesión.\n&lt;- para asignar, siempre.\nNombres en minúsculas, con _, sin acentos, y que digan qué guardan.\n\nY si algo se te olvida, que no sea esto: el valor de R no es que calcule, es que deja escrito cómo calculó.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "01-primeros-pasos-en-r.html#antes-de-la-próxima-sesión",
+    "href": "01-primeros-pasos-en-r.html#antes-de-la-próxima-sesión",
+    "title": "2  Primeros pasos en R",
+    "section": "2.9 Antes de la próxima sesión",
+    "text": "2.9 Antes de la próxima sesión\n\nEntra a tu proyecto de Posit Cloud y comprueba que abre sin errores (ver el anexo de Posit Cloud). No tienes que instalar nada.\nCorre install.packages(\"ggplot2\") una vez en tu proyecto: se usa en la tema 04.\nTermina los ejercicios 1 y 2 en un archivo .R guardado.\n\nSi algo no instala, escríbeme antes del miércoles. Resolver una instalación rota en vivo cuesta quince minutos de clase; por correo, cinco.\n\n\n\n\n\n\nR Core Team. (2024). An Introduction to R. R Foundation for Statistical Computing. https://cran.r-project.org/doc/manuals/r-release/R-intro.html",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Primeros pasos en R</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html",
+    "href": "02-tipos-y-estructuras-de-datos.html",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "",
+    "text": "3.1 El caso: por qué \"42\" + 10 no es 52\nTema 02 · unidad teórico-práctica\nEste capítulo es una escalera, no una lista de temas. Cada estructura aparece porque la anterior se queda corta con el problema que sigue. Si se lee como cinco cosas que memorizar, se pierde lo único que importa: reconocer qué te está pidiendo el problema que tienes delante.\nPara ti los dos «son 42 y 10». Para R, uno es un número y el otro es texto. El mensaje de error es de los buenos: dice exactamente qué pasó.\nEs, además, el error que más aparece en la vida real, cuando se abre un CSV en el que una columna traía un espacio de más, un guion o una coma decimal.\nclass() es la función que más se usa hoy, y as.numeric() inaugura una familia entera: as.character(), as.logical(), as.factor().",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html#el-caso-por-qué-42-10-no-es-52",
+    "href": "02-tipos-y-estructuras-de-datos.html#el-caso-por-qué-42-10-no-es-52",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "",
+    "text": "y   &lt;- 10\nnum &lt;- \"42\"\ny + num\n#&gt; Error in y + num : argumento no-numérico para operador binario\n\n\nclass(num)\n#&gt; [1] \"character\"\nclass(y)\n#&gt; [1] \"numeric\"\n\nnum &lt;- as.numeric(num)   # convertir el texto a número\ny + num\n#&gt; [1] 52\n\n\n\n\n\n\n\nas.numeric(\"hola\") devuelve NA con una advertencia, no con un error. Convertir a ciegas es como se pierden datos en silencio: conviene mirar cuántos NA aparecieron después de convertir.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html#los-tres-tipos-básicos",
+    "href": "02-tipos-y-estructuras-de-datos.html#los-tres-tipos-básicos",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "3.2 Los tres tipos básicos",
+    "text": "3.2 Los tres tipos básicos\na  &lt;- 5        # numérico\nb  &lt;- 3.14     # numérico\nc2 &lt;- 2e3      # numérico: 2000\n\nx &lt;- 5; y &lt;- 10\nx &lt; y          # lógico: TRUE\nx == y         # lógico: FALSE\n\nnombre &lt;- \"Luis\"     # carácter\ncurso  &lt;- 'IntroR'   # las comillas simples son equivalentes\nTres apuntes sobre esto:\n\na &lt;- 5 da \"numeric\", no \"integer\". R guarda los números como double por defecto; para un entero de verdad hace falta escribir 5L.\nLas comillas dobles y las simples son equivalentes. Elige unas y no las mezcles dentro de un archivo.\nEl nombre c2 está a propósito: c pisaría la función c(), que es la que se usa en todo el resto del capítulo (Sección 2.5.3).\n\n\n3.2.1 Los tres errores clásicos\n\"42\" + 10          # 1. operar entre tipos incompatibles -&gt; Error\n\nlogico &lt;- TRUE     # 2. \"logical\"\ntexto  &lt;- \"TRUE\"   #    \"character\" — no es lo mismo\n\nnombre &lt;- Luis     # 3. sin comillas -&gt; Error: objeto 'Luis' no encontrado\nEl tercero es el traicionero. Sin comillas, R no interpreta Luis como texto: busca un objeto llamado Luis. Si no existe, avisa. Si existe, obedece y te da su contenido, que casi nunca es lo que querías. Un error se convierte así en un bug silencioso.\n\n\n3.2.2 Un paréntesis: eso que usaste es una función\nclass() y as.numeric() son funciones: bloques de código con nombre que cumplen una tarea y se reutilizan tantas veces como haga falta, en vez de repetir líneas. Se reconocen por los paréntesis que siguen al nombre, y ?nombre dice qué argumentos aceptan.\nEscribir funciones propias es materia de otro curso. Pero conviene nombrar la idea aquí, porque de este punto en adelante todo lo que se hace es llamar funciones.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html#vectores",
+    "href": "02-tipos-y-estructuras-de-datos.html#vectores",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "3.3 Vectores",
+    "text": "3.3 Vectores\nUn vector es una colección ordenada de elementos del mismo tipo.\nv_num &lt;- c(1, 2, 3, 4.5)\nv_int &lt;- c(1L, 2L, 3L)        # la L fuerza un entero de verdad\nv_log &lt;- c(TRUE, FALSE, TRUE)\nv_chr &lt;- c(\"a\", \"b\", \"c\")\nc() viene de combine. Y «del mismo tipo» no es un detalle de implementación: es la definición.\n\n3.3.1 Qué pasa si mezclas tipos\nc(1, 2, \"tres\")\n#&gt; [1] \"1\"    \"2\"    \"tres\"\n\nc(TRUE, FALSE, 3)\n#&gt; [1] 1 0 3\nR no da error: convierte todo al tipo que lo admite todo. Se llama coerción y sigue este orden: lógico → numérico → carácter.\n\n\n\n\n\n\nTus números se volvieron texto sin avisar. Tres líneas más abajo, un sum() falla, y el error aparece muy lejos de donde se originó.\nRegla práctica: si un sum() o una comparación fallan sin motivo aparente, class() al vector antes que nada.\n\n\n\nEsta es la razón profunda de que a R le importen los tipos, y la que explica por qué el capítulo empieza por ahí y no por las estructuras.\n\n\n3.3.2 Otras formas de crear vectores\n1:6\n#&gt; [1] 1 2 3 4 5 6\n\nseq(from = 0, to = 1, by = 0.25)\n#&gt; [1] 0.00 0.25 0.50 0.75 1.00\n\nrep(0, times = 5)\n#&gt; [1] 0 0 0 0 0\n1:6 es el atajo de cada día. seq() hace falta cuando el paso no es 1, y rep() cuando hay que inicializar algo.\n\n\n3.3.3 Nombres\nImagina una lista de casos confirmados en distintos estados. No basta con tener los números: hace falta saber a qué estado corresponde cada uno.\ncasos_marzo &lt;- c(1200, 850, 430, 670, 1500, 920)\nnames(casos_marzo) &lt;- c(\"CDMX\", \"Jalisco\", \"Yucatan\",\n                        \"Puebla\", \"NuevoLeon\", \"Chiapas\")\ncasos_marzo\n#&gt;      CDMX   Jalisco   Yucatan    Puebla NuevoLeon   Chiapas\n#&gt;      1200       850       430       670      1500       920\n\n\n\n\n\n\nnames() no junta dos vectores. Le pega una etiqueta a cada posición del vector que ya existe: los datos siguen siendo exactamente los mismos.\nnames es un atributo del vector, no una segunda columna. Sirve para identificar cada posición con un texto, y para leer sin contar posiciones: casos_marzo[\"Puebla\"] devuelve 670.\n\n\n\nAquí se cierra lo que quedó pendiente en el Capítulo 2: aquellas doce variables sueltas para seis estados son ahora dos vectores.\n\n\n3.3.4 Cuatro formas de seleccionar\ndefunciones_marzo &lt;- c(50, 40, 12, 25, 65, 30)\n\ndefunciones_marzo[1]                        #&gt; 50               por posición\ndefunciones_marzo[c(2, 5)]                  #&gt; 40 65            varias\ndefunciones_marzo[-3]                       #&gt; 50 40 25 65 30   quita la tercera\ndefunciones_marzo[defunciones_marzo &gt; 30]   #&gt; 50 40 65         por condición\nDos cosas sorprenden aquí:\n\nLos índices empiezan en 1, no en 0. Quien venga de Python lo va a tropezar durante un par de sesiones.\nEl índice negativo excluye, no cuenta desde el final. [-3] significa «todos menos el tercero».\n\nY la cuarta forma es la importante, porque se repite en todas las estructuras que quedan.\ndefunciones_marzo &gt; 30\n#&gt;      CDMX   Jalisco   Yucatan    Puebla NuevoLeon   Chiapas\n#&gt;      TRUE      TRUE     FALSE     FALSE      TRUE     FALSE\nLa condición no devuelve los datos: devuelve un vector de TRUE y FALSE del mismo largo. Ese vector es lo que va dentro de los corchetes, y R se queda con las posiciones que valen TRUE.\nEntender ese paso intermedio es lo que hace que las matrices y los data frames sean fáciles en lugar de mágicos. Vale la pena correrlo en dos pasos: primero la condición sola, después dentro de los corchetes.\n\n\n3.3.5 Operaciones vectorizadas\ncasos_enero &lt;- c(3000, 1500, 1200, 1800, 2500, 2100)\nnames(casos_enero) &lt;- names(casos_marzo)\n\ncasos_enero + casos_marzo\n#&gt;      CDMX   Jalisco   Yucatan    Puebla NuevoLeon   Chiapas\n#&gt;      4200      2350      1630      2470      4000      3020\nR aplica la operación elemento por elemento, posición por posición, sin que escribas un ciclo. Se llama vectorización y es la razón de que R resulte cómodo para trabajar con datos.\nQuien haya programado en otro lenguaje espera un for. En R casi nunca hace falta, y cuando aparece suele ser señal de que existe una forma más corta.\nJunto a esa familia hay otra, la de agregación, que resume el vector entero en un solo número:\nsum(casos_enero)    #&gt; 12100\nsum(casos_marzo)    #&gt; 5570\nmean(casos_enero)   #&gt; 2016.667\nmin(casos_marzo)    #&gt; 430\nmax(casos_marzo)    #&gt; 1500\n\n\n\n\n\n\n\nFamilia\nDevuelve\n\n\n\n\nElemento a elemento (+, *, &gt;)\nun vector del mismo largo\n\n\nAgregación (sum, mean, min, max)\nun solo número\n\n\n\nTener clara esa distinción es lo que hace que colSums() y rowSums(), más abajo, no necesiten explicación.\n\n\n\n\n\n\nTipEjercicio 3 · letalidad de enero\n\n\n\nLa letalidad se define como \\(L = \\frac{D}{C} \\times 100\\), donde \\(D\\) son las defunciones y \\(C\\) el total de casos.\n¿Qué estados tuvieron una letalidad mayor a 3 en el mes de enero?\ncasos_enero       &lt;- c(3000, 1500, 1200, 1800, 2500, 2100)\ndefunciones_enero &lt;- c(100, 60, 25, 30, 80, 55)\nnames(casos_enero) &lt;- names(defunciones_enero) &lt;- names(casos_marzo)\n\n\nRespuesta. Dos líneas: una calcula, otra filtra.\nletalidad &lt;- (defunciones_enero / casos_enero) * 100\nletalidad\n#&gt;      CDMX   Jalisco   Yucatan    Puebla NuevoLeon   Chiapas\n#&gt;  3.333333  4.000000  2.083333  1.666667  3.200000  2.619048\n\nletalidad[letalidad &gt; 3]\n#&gt;      CDMX   Jalisco NuevoLeon\n#&gt;  3.333333  4.000000  3.200000\nFíjate en que los nombres viajan con los datos a través de la división y del filtro. No hubo que volver a decir qué estado era cada número: por eso valía la pena ponerlos.\n\n\n\n\n\n\nTipEjercicio 4 · enero contra marzo\n\n\n\n¿En qué estados la letalidad fue mayor en enero que en marzo?\n\n\nRespuesta.\nletalidad_marzo &lt;- (defunciones_marzo / casos_marzo) * 100\n\nletalidad &gt; letalidad_marzo\n#&gt;      CDMX   Jalisco   Yucatan    Puebla NuevoLeon   Chiapas\n#&gt;     FALSE     FALSE     FALSE     FALSE     FALSE     FALSE\n\nletalidad[letalidad &gt; letalidad_marzo]\n#&gt; named numeric(0)\n\n\n\n\n\n\nnamed numeric(0) no es un error. Dice cuatro cosas: es un vector, es numérico, tiene nombres y su longitud es cero. En ningún estado se cumplió la condición, y esa es la respuesta correcta.\n\n\n\nUn resultado vacío asusta la primera vez. Verlo a propósito, en un caso donde «ninguno» es la respuesta buena, evita leerlo como fallo la próxima vez.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html#matrices",
+    "href": "02-tipos-y-estructuras-de-datos.html#matrices",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "3.4 Matrices",
+    "text": "3.4 Matrices\nUna matriz es una estructura bidimensional —filas y columnas, como una tabla— en la que todos los elementos son del mismo tipo.\nAparece cuando el vector se queda corto. Por ejemplo, con la composición nutricional de cuatro alimentos por cada 100 g:\n\n\n\n\nkcal\nCarbohidratos\nProteínas\nGrasas\n\n\n\n\nManzana\n52\n14\n0.3\n0.2\n\n\nPollo (pechuga)\n165\n0\n31\n3.6\n\n\nArroz blanco\n130\n28\n2.7\n0.3\n\n\nFrijoles\n127\n23\n9\n0.5\n\n\n\nSe puede hacer con cuatro vectores. Pero entonces la relación entre ellos —que la primera posición de los cuatro es la manzana— deja de estar en los datos y pasa a estar en tu cabeza.\n\n3.4.1 R llena las matrices por columnas\nmatrix(1:9, nrow = 3, ncol = 3)\n#&gt;      [,1] [,2] [,3]\n#&gt; [1,]    1    4    7\n#&gt; [2,]    2    5    8\n#&gt; [3,]    3    6    9\n\n\n\n\n\n\nEl 1, 2, 3 quedó en la primera columna, no en la primera fila. Es la sorpresa clásica, y si no se detecta aquí se arrastra hasta la matriz de nutrientes, donde ya no es evidente porque los números no están ordenados.\n\n\n\nPrueba matrix(1:12, nrow = 3, ncol = 4) y busca dónde cae el 4.\nCuando cada vector es una fila —un alimento— hay que decirlo:\nmanzana &lt;- c(52, 14, 0.3, 0.2);  pollo  &lt;- c(165, 0, 31, 3.6)\narroz   &lt;- c(130, 28, 2.7, 0.3); frijol &lt;- c(127, 23, 9, 0.5)\n\nnutricion_matrix &lt;- matrix(c(manzana, pollo, arroz, frijol),\n                           nrow = 4, byrow = TRUE)\nSin byrow = TRUE la matriz sale transpuesta y con el sentido físico equivocado: la primera columna sería «manzana» y la primera fila «las calorías de los cuatro».\n\n\n3.4.2 Nombres de filas y de columnas\ncolnames(nutricion_matrix) &lt;- c(\"Calorias\", \"Carbohidratos\",\n                                \"Proteinas\", \"Grasas\")\nrownames(nutricion_matrix) &lt;- c(\"Manzana\", \"Pollo\", \"Arroz\", \"Frijoles\")\nnutricion_matrix\n#&gt;          Calorias Carbohidratos Proteinas Grasas\n#&gt; Manzana        52            14       0.3    0.2\n#&gt; Pollo         165             0      31.0    3.6\n#&gt; Arroz         130            28       2.7    0.3\n#&gt; Frijoles      127            23       9.0    0.5\nEn vectores era names(). En matrices no: hay dos dimensiones y hay que especificar cuál. Intentar names(matriz) &lt;- ... no falla con un mensaje claro; simplemente no hace lo que esperabas.\n\n\n3.4.3 Añadir filas y columnas\nhuevo    &lt;- c(155, 1.1, 13, 11)\nlentejas &lt;- c(116, 20, 9, 0.4)\nnutricion_extendida &lt;- rbind(nutricion_matrix, rbind(huevo, lentejas))\n\nfibra &lt;- c(2.4, 0, 0.1, 7.0, 0, 8.0)\nsodio &lt;- c(1, 74, 1, 2, 124, 2)\nnutricion_final &lt;- cbind(nutricion_extendida, Fibra = fibra, Sodio_mg = sodio)\nrbind() pega filas (row bind) y cbind() pega columnas (column bind). Las columnas nuevas llevan seis valores, uno por cada fila que ya tiene la matriz; si el largo no coincide, R recicla en silencio o falla, según el caso.\nUn detalle que se ve en la salida: rbind(huevo, lentejas) toma los nombres de las variables como nombres de fila, así que huevo y lentejas salen en minúscula y desentonan con los cuatro de arriba. Es un buen momento para hablar de consistencia en los nombres.\n\n\n3.4.4 Mirar sin imprimir\nclass(nutricion_matrix)\n#&gt; [1] \"matrix\" \"array\"\n\nstr(nutricion_matrix)\n#&gt;  num [1:4, 1:4] 52 165 130 127 14 0 28 23 0.3 31 ...\n#&gt;  - attr(*, \"dimnames\")=List of 2\n#&gt;   ..$ : chr [1:4] \"Manzana\" \"Pollo\" \"Arroz\" \"Frijoles\"\n#&gt;   ..$ : chr [1:4] \"Calorias\" \"Carbohidratos\" \"Proteinas\" \"Grasas\"\nstr() da una vista compacta de la estructura: dimensiones, tipo y una muestra del contenido. summary() da un resumen estadístico —mínimo, cuartiles, mediana, media, máximo— y solo funciona si la matriz es numérica.\nstr() es la función que más se usa en la vida real y la que menos se enseña. Con una matriz de 4×4 parece innecesaria; con una de veinte mil filas es lo único que se puede hacer.\n\n\n\n\n\n\nRegla de la casa: nunca imprimas un objeto del que no sabes el tamaño. Primero str() o dim().\n\n\n\n\n\n3.4.5 Selección: matriz[fila, columna]\nnutricion_final[\"Manzana\", \"Calorias\"]   #&gt; 52\nnutricion_final[\"Manzana\", ]             # toda la fila\nnutricion_final[ , \"Calorias\"]           # toda la columna\nnutricion_final[1, 1]                    # lo mismo, por posición\nnutricion_final[c(2:3), ]                # varias filas\nnutricion_final[ , c(\"Proteinas\", \"Grasas\")]\nDejar el hueco vacío significa «todas», y la coma nunca se omite: es lo que separa filas de columnas. Olvidarla —nutricion_final[\"Manzana\"]— no da un error claro, da un resultado raro.\n\n\n3.4.6 Selección por condición\nFunciona igual que en los vectores, en la posición de las filas:\nhigh_cal &lt;- nutricion_final[, \"Calorias\"] &gt; 100\nhigh_cal\n#&gt;  Manzana    Pollo    Arroz Frijoles    huevo lentejas\n#&gt;    FALSE     TRUE     TRUE     TRUE     TRUE     TRUE\n\nnutricion_final[high_cal, ]   # se queda con las cinco filas TRUE\n\n\n3.4.7 Combinar condiciones\nPara responder preguntas con más de un criterio se combinan vectores lógicos con tres operadores:\n\n\n\nOperador\nDevuelve TRUE si…\n\n\n\n\n& (Y)\nlas dos condiciones son TRUE\n\n\n\\| (O)\nal menos una lo es\n\n\n! (NO)\ninvierte: TRUE pasa a FALSE\n\n\n\n¿Qué alimentos tienen más de 10 g de proteína Y menos de 15 g de carbohidratos?\ncondicion_A &lt;- nutricion_final[, \"Proteinas\"]     &gt; 10\ncondicion_B &lt;- nutricion_final[, \"Carbohidratos\"] &lt; 15\n\nnutricion_final[condicion_A & condicion_B, ]\n#&gt;       Calorias Carbohidratos Proteinas Grasas Fibra Sodio_mg\n#&gt; Pollo      165           0.0        31    3.6     0       74\n#&gt; huevo      155           1.1        13   11.0     0      124\nGuardar cada condición en su propia variable no es adorno: permite imprimirlas por separado cuando el resultado no es el esperado. Es la técnica de depuración de este bloque, y sin ella una selección compuesta que devuelve algo raro no se puede diagnosticar.\n¿Qué alimentos tienen más de 5 g de fibra O menos de 1 g de grasa?\nnutricion_final[nutricion_final[, \"Fibra\"]  &gt; 5 |\n                nutricion_final[, \"Grasas\"] &lt; 1, ]\n#&gt;   Manzana, Arroz, Frijoles, lentejas\n¿Cuáles tienen poco sodio y poca grasa, pero no son la manzana?\nlow_sod    &lt;- nutricion_final[, \"Sodio_mg\"] &lt; 10\nlow_gras   &lt;- nutricion_final[, \"Grasas\"]   &lt; 10\nes_manzana &lt;- rownames(nutricion_final) == \"Manzana\"\n\nnutricion_final[low_sod & low_gras & !es_manzana, ]\n#&gt;   Arroz, Frijoles, lentejas\nrownames() devuelve un vector de texto; compararlo con == produce el vector lógico que ! invierte.\n\n\n3.4.8 Resúmenes por dimensión\ncolSums(nutricion_matrix)\n#&gt;      Calorias Carbohidratos     Proteinas        Grasas\n#&gt;         474.0          65.0          43.0           4.6\n\ncolMeans(nutricion_matrix)\n#&gt;      Calorias Carbohidratos     Proteinas        Grasas\n#&gt;        118.50         16.25         10.75          1.15\nmacros &lt;- nutricion_final[, c(\"Carbohidratos\", \"Proteinas\", \"Grasas\")]\nrowSums(macros)\n#&gt;  Manzana    Pollo    Arroz Frijoles    huevo lentejas\n#&gt;     14.5     34.6     31.0     32.5     25.1     29.4\n\n\n\n\n\n\nLa suma de la columna Calorías existe como número y no significa nada: son kcal de alimentos distintos. rowSums(macros) sí significa algo —gramos de macronutrientes por alimento— porque las tres columnas comparten unidad.\nR calcula lo que le pidas. No valida el sentido de la operación; eso te toca a ti.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html#factores",
+    "href": "02-tipos-y-estructuras-de-datos.html#factores",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "3.5 Factores",
+    "text": "3.5 Factores\n¿Qué pasa cuando una variable solo puede tomar un número limitado de valores? Por ejemplo, clasificar los alimentos en «Fruta», «Proteína» o «Carbohidrato».\nPara eso están los factores: vectores pensados para datos categóricos.\nalimentos &lt;- c(\"Fruta\", \"Proteína\", \"Carbohidrato\",\n               \"Proteína\", \"Carbohidrato\", \"Fruta\")\nfactor_alimentos &lt;- factor(alimentos)\nfactor_alimentos\n#&gt; [1] Fruta        Proteína     Carbohidrato Proteína     Carbohidrato Fruta\n#&gt; Levels: Carbohidrato Fruta Proteína\nLos niveles (levels) son las categorías que R encontró. Por dentro, R no guarda seis textos: guarda seis enteros y una tabla que dice que el 1 es «Carbohidrato», el 2 «Fruta» y el 3 «Proteína». Si la categoría se repite mil veces, la diferencia de memoria y de velocidad es grande.\nPero la eficiencia no es la razón principal por la que existen; eso viene al final del apartado.\n\n3.5.1 Contar categorías\nsummary(factor_alimentos)\n#&gt; Carbohidrato        Fruta     Proteína\n#&gt;            2            2            2\n\ntable(factor_alimentos)\n#&gt; factor_alimentos\n#&gt; Carbohidrato        Fruta     Proteína\n#&gt;            2            2            2\n\n\n\n\n\n\nsummary() de una matriz numérica daba cuartiles. De un factor da un conteo. La misma función se comporta según el tipo del objeto que le des.\nEse es un rasgo grande del diseño de R, y es la razón por la que class() importa tanto.\n\n\n\n\n\n3.5.2 Categorías con orden\nAlgunas variables categóricas tienen un orden intrínseco: «Bajo», «Medio» y «Alto» no son intercambiables.\nporciones &lt;- c(\"Mediana\", \"Pequeña\", \"Grande\", \"Mediana\", \"Pequeña\")\n\nfactor_porciones &lt;- factor(porciones,\n                           levels = c(\"Pequeña\", \"Mediana\", \"Grande\"),\n                           ordered = TRUE)\nfactor_porciones\n#&gt; [1] Mediana Pequeña Grande  Mediana Pequeña\n#&gt; Levels: Pequeña &lt; Mediana &lt; Grande\n\nfactor_porciones[1] &gt; factor_porciones[2]   # Mediana &gt; Pequeña\n#&gt; [1] TRUE\n\n\n\n\n\n\nAdvertenciaEl orden alfabético es una trampa\n\n\n\nSi no escribes levels, R los ordena alfabéticamente: Grande &lt; Mediana &lt; Pequeña, que es justo al revés.\nLo peligroso es que nada avisa: el factor queda ordenado, las comparaciones funcionan y el resultado está invertido. Sobrevive hasta la gráfica final, donde las categorías salen al revés y nadie sabe por qué.\nSi el factor es ordenado, levels se escribe siempre a mano.\n\n\n\n\n\n\n\n\nTipEjercicio 5 · opiniones\n\n\n\nevaluacion_sabor &lt;- c(\"Bueno\", \"Excelente\", \"Regular\",\n                      \"Bueno\", \"Excelente\")\nConviértelo en un factor ordenado llamado factor_sabor, con los niveles en el orden lógico Regular &lt; Bueno &lt; Excelente, y cuenta cuántas opiniones hay de cada tipo con summary().\n\n\nRespuesta.\nfactor_sabor &lt;- factor(evaluacion_sabor,\n                       levels = c(\"Regular\", \"Bueno\", \"Excelente\"),\n                       ordered = TRUE)\nsummary(factor_sabor)\n#&gt;   Regular     Bueno Excelente\n#&gt;         1         2         2\nComprueba que el orden del conteo es el de levels y no el alfabético: ahí se ve que escribirlo sirvió de algo.\n\n\n3.5.3 Añadir una categoría\nUn factor no acepta valores que no estén en sus niveles. Primero se declara el nivel; después se asigna el valor.\ndietas &lt;- c(\"Omnívora\", \"Vegetariana\", \"Vegana\", \"Omnívora\", \"Vegetariana\")\nfactor_dieta &lt;- factor(dietas)\n\nlevels(factor_dieta) &lt;- c(levels(factor_dieta), \"Keto\")   # primero el nivel\nfactor_dieta[6] &lt;- \"Keto\"                                 # después el valor\nSi te saltas el primer paso, R pone NA con una advertencia, no con un error.\n\n\n3.5.4 Para qué sirven de verdad\n\n\nlm(), glm() y compañía generan automáticamente el análisis por grupo cuando una variable es factor.\nggplot2 le da un color, una faceta o una caja a cada nivel, como se ve en el capítulo de visualización con ggplot2.\nEl orden de los niveles decide el orden en que salen las categorías en cualquier tabla o gráfica.\n\nQue una variable sea factor o texto cambia el resultado. No es un tecnicismo.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html#marcos-de-datos-data-frames",
+    "href": "02-tipos-y-estructuras-de-datos.html#marcos-de-datos-data-frames",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "3.6 Marcos de datos (data frames)",
+    "text": "3.6 Marcos de datos (data frames)\n¿Y cuando cada columna es de un tipo distinto? El nombre de un alimento es texto, sus calorías son un número y su grupo nutricional es un factor. Una matriz no puede: exige un solo tipo.\nPara eso está el data frame, que es:\n\nuna lista de vectores: cada columna es un vector;\nde tipos distintos: numérico, carácter, lógico, factor, todos juntos;\ndel mismo largo: todas las columnas con el mismo número de filas.\n\nnutricion_df &lt;- data.frame(\n  Nombre      = c(\"Manzana\", \"Pollo\", \"Arroz\",\n                  \"Frijoles\", \"Huevo\", \"Lentejas\"),\n  Calorias    = c(52, 165, 130, 127, 155, 116),\n  Grupo       = factor(c(\"Fruta\", \"Proteína\", \"Carbohidrato\",\n                         \"Legumbre\", \"Proteína\", \"Legumbre\")),\n  Vegetariano = c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE)\n)\nEsta es la estructura de casi todo conjunto de datos real: cualquier CSV o archivo de Excel que cargues se convierte en un data frame.\n\n3.6.1 Inspeccionarlo\nstr(nutricion_df)\n#&gt; 'data.frame':    6 obs. of  4 variables:\n#&gt;  $ Nombre     : chr  \"Manzana\" \"Pollo\" \"Arroz\" \"Frijoles\" ...\n#&gt;  $ Calorias   : num  52 165 130 127 155 116\n#&gt;  $ Grupo      : Factor w/ 4 levels \"Carbohidrato\",..: 2 4 1 3 4 3\n#&gt;  $ Vegetariano: logi  TRUE FALSE TRUE TRUE FALSE TRUE\nLos enteros 2 4 1 3 4 3 de la línea de Grupo son los niveles codificados: «Fruta» es el 2 porque los niveles van en orden alfabético. Es la prueba visible de lo que se explicó en el apartado de factores.\n\n\n\nFunción\nPara qué\n\n\n\n\nstr()\nestructura y tipos — la primera siempre\n\n\nsummary()\nresumen estadístico por columna\n\n\nhead() · tail()\nlas 6 primeras o últimas filas\n\n\ndim() · nrow() · ncol()\ntamaño\n\n\nnames() · colnames()\nnombres de columna\n\n\n\nhead(nutricion_df, n = 3) muestra solo las tres primeras.\n\n\n3.6.2 Seleccionar\nnutricion_df$Calorias        #&gt; [1]  52 165 130 127 155 116\nnutricion_df[[\"Nombre\"]]     # útil si el nombre está guardado en una variable\nnutricion_df[, 2]            # por posición\n\nnutricion_df[1, ]                            # primera fila, todas las columnas\nnutricion_df[c(1, 2), c(\"Nombre\", \"Grupo\")]  # filas y columnas\n$ es el que se usa el noventa por ciento de las veces. Y con Tab después del $, RStudio ofrece los nombres de columna: es uno de los trucos que más cambian la experiencia del primer mes.\n\n\n3.6.3 Filtrar por condición\nnutricion_df[nutricion_df$Calorias &gt; 120, ]\n#&gt;     Nombre Calorias        Grupo Vegetariano\n#&gt; 2    Pollo      165     Proteína       FALSE\n#&gt; 3    Arroz      130 Carbohidrato        TRUE\n#&gt; 4 Frijoles      127     Legumbre        TRUE\n#&gt; 5    Huevo      155     Proteína       FALSE\n\nnutricion_df[nutricion_df$Vegetariano == TRUE &\n             nutricion_df$Calorias &lt; 120, ]\n#&gt;     Nombre Calorias    Grupo Vegetariano\n#&gt; 1  Manzana       52    Fruta        TRUE\n#&gt; 6 Lentejas      116 Legumbre        TRUE\nEs el mismo mecanismo que en vectores y en matrices: una condición que produce TRUE/FALSE, metida entre corchetes. Tercera vez que aparece en este capítulo, y no son tres reglas: es una.\nLos números de fila que sobreviven —2, 3, 4, 5 y luego 1, 6— son los del data frame original, no una renumeración.\n\n\n3.6.4 Añadir una columna\nnutricion_df$Proteinas &lt;- c(0.3, 31, 2.7, 9, 13, 9)\nEso es todo: asignarle un vector con $. El vector tiene que tener exactamente tantos elementos como filas. Si tiene menos y su largo es divisor del número de filas, R lo recicla sin avisar; si no lo es, falla. El aviso práctico es «cuenta tus filas».\n\n\n\n\n\n\nTipEjercicio 6 · un data frame propio\n\n\n\nCrea bebidas_df con tres bebidas y estas columnas:\n\n\n\n\n\n\n\n\nColumna\nValores\nTipo\n\n\n\n\nNombre\nAgua · Jugo de Naranja · Refresco de Cola\ncarácter\n\n\nVolumen_ml\n500 · 250 · 355\nnumérico\n\n\nTipo\nBebida sin azúcar · Jugo de fruta · Bebida azucarada\nfactor\n\n\n\nDespués:\n\nverifica la estructura con str();\nmuestra solo la columna Volumen_ml;\nfiltra las bebidas de más de 300 ml;\nañade una columna lógica Requiere_Refrigeracion, TRUE solo para el jugo.\n\nLa respuesta completa está en notebooks/R/02-estructuras-de-datos.qmd.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html#listas",
+    "href": "02-tipos-y-estructuras-de-datos.html#listas",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "3.7 Listas",
+    "text": "3.7 Listas\nUna lista almacena una colección de objetos de cualquier tipo y cualquier longitud: vectores, data frames, matrices, incluso otras listas. Sirve para encapsular datos heterogéneos.\nUn data frame exige que todas las columnas midan lo mismo. Una lista, no.\ndatos_casos &lt;- data.frame(\n  ID_Caso       = c(\"C01\", \"C02\", \"C03\"),\n  Edad          = c(25, 42, 31),\n  Hospitalizado = c(FALSE, TRUE, FALSE)\n)\nmatriz_contactos &lt;- matrix(c(0, 1, 1, 1, 0, 0, 1, 0, 0), nrow = 3)\n\ninvestigacion_brote &lt;- list(\n  Nombre    = \"Nuevo brote\",     # texto de largo 1\n  Datos     = datos_casos,       # un data frame de 3 x 3\n  Contactos = matriz_contactos,  # una matriz de 3 x 3\n  Activo    = TRUE               # un lógico de largo 1\n)\n\nstr(investigacion_brote)\n#&gt; List of 4\n#&gt;  $ Nombre   : chr \"Nuevo brote\"\n#&gt;  $ Datos    :'data.frame':   3 obs. of  3 variables:\n#&gt;  $ Contactos: num [1:3, 1:3] 0 1 1 1 0 0 1 0 0\n#&gt;  $ Activo   : logi TRUE\n\n3.7.1 Sacar cosas de una lista\nHay tres operadores y la diferencia entre ellos es la que más tiempo hace perder al empezar:\n\n\n\nOperador\nQué devuelve\n\n\n\n\n$Datos\nel objeto que hay dentro\n\n\n[[\"Datos\"]]\nel objeto, y además admite índice numérico\n\n\n[\"Datos\"]\nuna sublista — su clase sigue siendo list\n\n\n\nclass(investigacion_brote[[\"Nombre\"]])   #&gt; [1] \"character\"\nclass(investigacion_brote[\"Nombre\"])     #&gt; [1] \"list\"\n\n\n\n\n\n\nUn corchete devuelve una caja más chica. Dos corchetes devuelven lo que hay dentro de la caja.\n\n\n\nAñadir o modificar elementos funciona con los mismos operadores, y se pueden anidar:\ninvestigacion_brote[[\"Ubicacion\"]] &lt;- \"Hospital Central\"\ninvestigacion_brote$Datos$Edad &lt;- c(25, 42, 31)\n\n\n3.7.2 Por qué importan\nPorque son el formato de salida estándar de muchas funciones estadísticas de R. Cuando corras lm() en otro curso, lo que devuelve es una lista. Saber extraerle elementos es lo que permite usar el resultado en lugar de solo mirarlo.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html#la-escalera-de-un-vistazo",
+    "href": "02-tipos-y-estructuras-de-datos.html#la-escalera-de-un-vistazo",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "3.8 La escalera, de un vistazo",
+    "text": "3.8 La escalera, de un vistazo\n\n\n\n\n\n\n\n\nEstructura\nGuarda\nSe rompe cuando…\n\n\n\n\nVector\nun tipo, una dimensión\nnecesitas filas y columnas\n\n\nMatriz\nun tipo, dos dimensiones\nlas columnas son de tipos distintos\n\n\nFactor\ncategorías, con o sin orden\n— es un vector especializado\n\n\nData frame\ntipos distintos, mismo largo\nlos elementos no miden lo mismo\n\n\nLista\ncualquier cosa\n— no se rompe, por eso es la última\n\n\n\nNo hay que memorizar cinco estructuras. Hay que reconocer qué te está pidiendo el problema.\nY sobre todo, lo que se repitió tres veces:\nv[v &gt; 30]                             # vector\nm[m[, \"Calorias\"] &gt; 100, ]            # matriz\ndf[df$Calorias &gt; 120, ]               # data frame\nUna sola idea —la condición devuelve un vector lógico, ese vector va entre corchetes, R se queda con lo que valga TRUE— en tres sintaxis. La misma reaparece en el capítulo de visualización con ggplot2 para decidir qué se dibuja.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "02-tipos-y-estructuras-de-datos.html#antes-de-la-próxima-sesión",
+    "href": "02-tipos-y-estructuras-de-datos.html#antes-de-la-próxima-sesión",
+    "title": "3  Tipos y estructuras de datos",
+    "section": "3.9 Antes de la próxima sesión",
+    "text": "3.9 Antes de la próxima sesión\n\nTermina el ejercicio 6 en un archivo .R guardado.\nComprueba que library(ggplot2) funciona sin error.\nCorre str(mpg) y mira qué tipo tiene cada columna.\n\nEl punto 3 no es de relleno: mpg es el conjunto de datos con el que se trabaja todo el tema 04, y lo primero que haremos es preguntarnos qué columna se puede mapear a qué.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Tipos y estructuras de datos</span>"
+    ]
+  },
+  {
+    "objectID": "90-anexo-posit-cloud.html",
+    "href": "90-anexo-posit-cloud.html",
+    "title": "Anexo · Posit Cloud",
+    "section": "",
+    "text": "Crear tu cuenta\nEn este curso no instalas nada. Trabajamos en Posit Cloud, que es RStudio corriendo dentro del navegador.\nCon eso ya tienes RStudio. No hay descarga ni instalación.",
+    "crumbs": [
+      "Anexos",
+      "Anexo · Posit Cloud"
+    ]
+  },
+  {
+    "objectID": "90-anexo-posit-cloud.html#crear-tu-cuenta",
+    "href": "90-anexo-posit-cloud.html#crear-tu-cuenta",
+    "title": "Anexo · Posit Cloud",
+    "section": "",
+    "text": "Entra a https://posit.cloud.\nElige Sign Up y el plan Cloud Free.\nPuedes registrarte con tu correo, o con tu cuenta de Google o de GitHub.\nConfirma el correo de verificación.",
+    "crumbs": [
+      "Anexos",
+      "Anexo · Posit Cloud"
+    ]
+  },
+  {
+    "objectID": "90-anexo-posit-cloud.html#qué-vas-a-ver",
+    "href": "90-anexo-posit-cloud.html#qué-vas-a-ver",
+    "title": "Anexo · Posit Cloud",
+    "section": "Qué vas a ver",
+    "text": "Qué vas a ver\nLa misma ventana de RStudio que usarías en tu computadora:\n\nConsola, abajo a la izquierda: donde escribes y R responde.\nEditor, arriba a la izquierda: donde guardas tu código.\nEnvironment, arriba a la derecha: los objetos que has creado.\nFiles / Plots / Packages, abajo a la derecha.\n\nNo es una versión reducida ni un simulador: es RStudio. Lo que aprendas aquí funciona igual el día que instales R en tu máquina.",
+    "crumbs": [
+      "Anexos",
+      "Anexo · Posit Cloud"
+    ]
+  },
+  {
+    "objectID": "90-anexo-posit-cloud.html#por-qué-en-la-nube-y-no-en-tu-computadora",
+    "href": "90-anexo-posit-cloud.html#por-qué-en-la-nube-y-no-en-tu-computadora",
+    "title": "Anexo · Posit Cloud",
+    "section": "Por qué en la nube y no en tu computadora",
+    "text": "Por qué en la nube y no en tu computadora\nInstalar R y RStudio en cada computadora convierte la primera clase en soporte técnico: versiones distintas, permisos de administrador, rutas con acentos, antivirus. Se va la sesión y nadie aprendió R.\nEn la nube trabajamos sobre el mismo R, con los mismos paquetes. Si algo falla, falla igual para todo el grupo y se resuelve una vez.",
+    "crumbs": [
+      "Anexos",
+      "Anexo · Posit Cloud"
+    ]
+  },
+  {
+    "objectID": "90-anexo-posit-cloud.html#límite-del-plan-gratuito",
+    "href": "90-anexo-posit-cloud.html#límite-del-plan-gratuito",
+    "title": "Anexo · Posit Cloud",
+    "section": "Límite del plan gratuito",
+    "text": "Límite del plan gratuito\nEl plan Cloud Free incluye un número limitado de horas de cómputo al mes —alrededor de 15— y un tope de proyectos.\nPara las sesiones del curso alcanza, pero conviene saber dos cosas:\n\nCierra el proyecto cuando termines. Un proyecto abierto sigue consumiendo horas aunque no estés escribiendo. Es la causa más común de quedarse sin horas a media semana.\nPuedes revisar tu consumo en la sección de tu cuenta.\n\n\n\n\n\n\n\nLas condiciones del plan gratuito las fija Posit y cambian de vez en cuando. Verifica el límite vigente en https://posit.cloud/plans.",
+    "crumbs": [
+      "Anexos",
+      "Anexo · Posit Cloud"
+    ]
+  },
+  {
+    "objectID": "90-anexo-posit-cloud.html#si-prefieres-instalarlo-en-tu-computadora",
+    "href": "90-anexo-posit-cloud.html#si-prefieres-instalarlo-en-tu-computadora",
+    "title": "Anexo · Posit Cloud",
+    "section": "Si prefieres instalarlo en tu computadora",
+    "text": "Si prefieres instalarlo en tu computadora\nSe puede, y al final del curso lo vemos con calma. El orden importa: primero R, después RStudio, porque RStudio necesita que R ya exista para encontrarlo.\n\nR — https://cran.r-project.org\nRStudio Desktop — https://posit.co/download/rstudio-desktop/\n\nNo es requisito del curso. Si decides hacerlo, hazlo además de Posit Cloud, no en lugar de: las sesiones se dan sobre el entorno de la nube.",
+    "crumbs": [
+      "Anexos",
+      "Anexo · Posit Cloud"
+    ]
+  },
+  {
+    "objectID": "91-anexo-glosario.html",
+    "href": "91-anexo-glosario.html",
+    "title": "Anexo · Glosario",
+    "section": "",
+    "text": "Términos técnicos que aparecen en el curso, definidos en el punto donde se usan por primera vez y recogidos aquí para consulta rápida.\nObjeto. Un nombre al que le asignas un valor para poder reutilizarlo.\nFunción. Una instrucción que recibe algo, hace una operación y devuelve un resultado.\nVector. Una secuencia de valores del mismo tipo.\nData frame. Una tabla: columnas con nombre, cada una del mismo largo.\nReproducibilidad. Que otra persona, con el mismo código y los mismos datos, obtenga el mismo resultado.\nRepositorio. La carpeta del proyecto con su historial de cambios versionado.",
+    "crumbs": [
+      "Anexos",
+      "Anexo · Glosario"
+    ]
+  },
+  {
+    "objectID": "92-anexo-errores-frecuentes.html",
+    "href": "92-anexo-errores-frecuentes.html",
+    "title": "4  Anexo · Errores frecuentes",
+    "section": "",
+    "text": "4.1 Errores que R sí reporta\nEste anexo está ordenado por lo que ves en la consola, no por tema. Cuando algo falla, busca aquí el mensaje.\nCasi todos estos errores aparecen a lo largo del curso y ninguno es señal de que lo estés haciendo mal: son la forma en que R avisa, y aprender a leerlos es parte del curso.",
+    "crumbs": [
+      "Anexos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anexo · Errores frecuentes</span>"
+    ]
+  },
+  {
+    "objectID": "92-anexo-errores-frecuentes.html#errores-que-r-sí-reporta",
+    "href": "92-anexo-errores-frecuentes.html#errores-que-r-sí-reporta",
+    "title": "4  Anexo · Errores frecuentes",
+    "section": "",
+    "text": "4.1.1 could not find function \"...\"\nError in ggplot(...) : could not find function \"ggplot\"\nFalta library(ggplot2) en esta sesión. Instalar y cargar son dos cosas distintas (Sección 2.4.1).\nTambién puede ser una errata: R distingue mayúsculas de minúsculas, así que Ggplot() no existe. Tab completa el nombre y de paso confirma que existe.\n\n\n4.1.2 objeto 'x' no encontrado\nError: objeto 'casos' no encontrado\nTres causas, en orden de frecuencia:\n\nTodavía no lo creaste. Suele pasar al correr un script desde la mitad.\nLo escribiste distinto. casos no es Casos, y aun no es aún.\nSe te olvidaron las comillas alrededor de un texto: nombre &lt;- Luis hace que R busque un objeto llamado Luis.\n\n\n\n4.1.3 argumento no-numérico para operador binario\nError in y + num : argumento no-numérico para operador binario\nEstás sumando un número con un texto. Comprueba con class() y convierte con as.numeric(). Se ve en el tema de tipos y estructuras de datos.\nEn datos reales, esto casi siempre significa que una columna que debía ser numérica se leyó como texto porque traía un espacio, un guion o una coma decimal.\n\n\n4.1.4 subíndice fuera de los límites\nError in x[[10]] : subíndice fuera de los límites\nPediste el elemento 10 de algo que tiene menos. Comprueba el tamaño con length(), dim() o str() antes de indexar.\nRecuerda que en R los índices empiezan en 1, no en 0.\n\n\n4.1.5 no se puede abrir la conexión / cannot open file\nR no encuentra el archivo. Comprueba dónde está buscando:\ngetwd()             # directorio de trabajo actual\nlist.files()        # qué hay ahí\nLa solución duradera no es setwd(): es trabajar dentro de un proyecto de RStudio (.Rproj), que fija el directorio de trabajo en la carpeta del proyecto.",
+    "crumbs": [
+      "Anexos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anexo · Errores frecuentes</span>"
+    ]
+  },
+  {
+    "objectID": "92-anexo-errores-frecuentes.html#avisos-que-no-son-errores-y-son-peores",
+    "href": "92-anexo-errores-frecuentes.html#avisos-que-no-son-errores-y-son-peores",
+    "title": "4  Anexo · Errores frecuentes",
+    "section": "4.2 Avisos que no son errores, y son peores",
+    "text": "4.2 Avisos que no son errores, y son peores\nUn error para la ejecución. Un aviso la deja seguir con datos equivocados.\n\n4.2.1 NAs introducidos por coerción\nas.numeric(\"hola\")\n#&gt; [1] NA\n#&gt; Warning message: NAs introducidos por coerción\nConvertiste a número algo que no lo era, y ese valor ahora es NA. Si conviertes una columna entera, cuenta cuántos NA aparecieron:\nsum(is.na(mi_columna))\nSi el número no es cero, ve a mirar esas filas antes de seguir.\n\n\n4.2.2 Coerción silenciosa en un vector\nc(1, 2, \"tres\")\n#&gt; [1] \"1\"    \"2\"    \"tres\"\nSin ningún aviso. Tus números se volvieron texto y el error va a aparecer mucho más abajo, cuando un sum() falle.\nRegla: si una operación numérica falla sin motivo aparente, class() al vector antes que nada.\n\n\n4.2.3 longitud del objeto mayor no es múltiplo de la longitud del menor\nR estaba reciclando un vector corto para completar uno largo, y no le salió exacto. El reciclado en sí no avisa cuando el largo es divisor, así que este mensaje es la punta del problema.\nCuenta tus filas antes de asignar una columna nueva.\n\n\n4.2.4 Un factor al que le asignas un nivel que no existe\nfactor_dieta[6] &lt;- \"Keto\"\n#&gt; Warning message: invalid factor level, NA generated\nPrimero se declara el nivel, después se asigna el valor. Los factores se ven en el tema de tipos y estructuras de datos.",
+    "crumbs": [
+      "Anexos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anexo · Errores frecuentes</span>"
+    ]
+  },
+  {
+    "objectID": "92-anexo-errores-frecuentes.html#resultados-que-parecen-errores-y-no-lo-son",
+    "href": "92-anexo-errores-frecuentes.html#resultados-que-parecen-errores-y-no-lo-son",
+    "title": "4  Anexo · Errores frecuentes",
+    "section": "4.3 Resultados que parecen errores y no lo son",
+    "text": "4.3 Resultados que parecen errores y no lo son\n\n4.3.1 named numeric(0), character(0), integer(0)\nUn vector vacío. Ninguna posición cumplió la condición. Es una respuesta válida y a veces es la respuesta correcta.\n\n\n4.3.2 NULL\nEl elemento no existe. En una lista, mi_lista$Inexistente devuelve NULL en vez de dar error, lo cual es cómodo y también una fuente de confusión.\n\n\n4.3.3 [1] al principio de cada línea\nNo es parte del resultado: es la posición del primer elemento que R está imprimiendo en esa línea. Con vectores largos verás [1], [18], [35]…\n\n\n\n4.3.4 Una gráfica que no aparece\nDentro de un script o una función, ggplot() construye el objeto pero no lo dibuja si no lo imprimes. En la consola se dibuja solo; dentro de un for o de una función, hay que envolverlo en print().",
+    "crumbs": [
+      "Anexos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anexo · Errores frecuentes</span>"
+    ]
+  },
+  {
+    "objectID": "92-anexo-errores-frecuentes.html#confusiones-de-concepto",
+    "href": "92-anexo-errores-frecuentes.html#confusiones-de-concepto",
+    "title": "4  Anexo · Errores frecuentes",
+    "section": "4.4 Confusiones de concepto",
+    "text": "4.4 Confusiones de concepto\n\n\n\n\n\n\n\nSíntoma\nCausa real\n\n\n\n\n«Instalé el paquete y sigue sin funcionar»\nfalta library() en esta sesión\n\n\n«Le puse names() a la matriz y no pasó nada»\nen matrices son rownames() y colnames()\n\n\n«Los números salieron en la columna equivocada»\nmatrix() llena por columnas; falta byrow = TRUE\n\n\n«Las categorías salen al revés en la gráfica»\nfactor ordenado sin levels escrito a mano\n\n\n\n\n«geom_point(aes(colour = \"blue\")) no pinta de azul» | dentro de aes() van variables, fuera van valores |\n\n\n«Mis barras cuentan en vez de usar mi total» | geom_bar() cuenta; querías geom_col() |\n\n«Perdí todo el trabajo al cerrar RStudio» | estaba en la consola, no en un script guardado |",
+    "crumbs": [
+      "Anexos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anexo · Errores frecuentes</span>"
+    ]
+  },
+  {
+    "objectID": "92-anexo-errores-frecuentes.html#cómo-pedir-ayuda-de-forma-que-se-pueda-contestar",
+    "href": "92-anexo-errores-frecuentes.html#cómo-pedir-ayuda-de-forma-que-se-pueda-contestar",
+    "title": "4  Anexo · Errores frecuentes",
+    "section": "4.5 Cómo pedir ayuda de forma que se pueda contestar",
+    "text": "4.5 Cómo pedir ayuda de forma que se pueda contestar\nCuando escribas —al canal del curso o por correo— incluye estas cuatro cosas:\n\nQué querías hacer, en una frase.\nEl código exacto que corriste, copiado y pegado, no descrito.\nEl mensaje completo, copiado y pegado, no una captura recortada.\nLa salida de sessionInfo(), que dice tu versión de R y qué paquetes tienes cargados.\n\nCon eso, casi cualquier problema se resuelve en una respuesta. Sin eso, hacen falta tres.",
+    "crumbs": [
+      "Anexos",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anexo · Errores frecuentes</span>"
+    ]
+  },
+  {
+    "objectID": "99-referencias.html",
+    "href": "99-referencias.html",
+    "title": "Referencias",
+    "section": "",
+    "text": "R Core Team. (2024). An introduction to r. R Foundation for\nStatistical Computing. https://cran.r-project.org/doc/manuals/r-release/R-intro.html",
+    "crumbs": [
+      "Referencias"
+    ]
+  }
+]

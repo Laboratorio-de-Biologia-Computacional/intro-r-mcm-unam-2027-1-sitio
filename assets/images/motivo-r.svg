@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="72 110 453 359" width="453" height="359" role="img" aria-label="Motivo del curso: una rejilla de datos con una columna resaltada y una dispersión que sale de ella">
+
+  <style>
+    .punto {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: latir 4.5s ease-in-out infinite;
+    }
+    .vector { animation: brillar 4.5s ease-in-out infinite; }
+    @keyframes latir {
+      0%, 100% { transform: scale(1); opacity: 0.92; }
+      50%      { transform: scale(1.18); opacity: 1; }
+    }
+    @keyframes brillar {
+      0%, 100% { opacity: 0.22; }
+      50%      { opacity: 0.45; }
+    }
+    /* ── Chispazo ──────────────────────────────────────────────────────
+       El rayo NO es un adorno añadido: es la propia serie de datos. La
+       polilínea que une los puntos ya zigzaguea hacia arriba, así que al
+       descargarse se lee como un relámpago sin dibujar nada nuevo.
+
+       Eso es lo que hace que signifique algo: lo que ilumina la portada son
+       los datos, no una decoración encima de ellos.
+
+       Golpe de 60 ms, repique, y rescoldo que se desvanece. Ciclo de 3 s: en
+       una portada proyectada se ve una vez y deja de llamar la atención. El
+       resto del tiempo la línea es exactamente la que entregó Meza. */
+    .rayo-linea {
+      animation: descarga 3s steps(1, end) infinite;
+    }
+    .rayo-resplandor {
+      opacity: 0;
+      filter: blur(7px);
+      animation: rescoldo 3s ease-out infinite;
+    }
+    @keyframes descarga {
+      0%,   0.9% { stroke: #D5A034; stroke-width: 2.4;  stroke-opacity: 0.55; }
+      1.0%       { stroke: #F8DB96; stroke-width: 6.5;  stroke-opacity: 1.00; }
+      3.3%       { stroke: #D5A034; stroke-width: 2.4;  stroke-opacity: 0.55; }
+      5.0%       { stroke: #F3CE72; stroke-width: 5.0;  stroke-opacity: 0.95; }
+      6.7%, 100% { stroke: #D5A034; stroke-width: 2.4;  stroke-opacity: 0.55; }
+    }
+    @keyframes rescoldo {
+      0%,   0.9% { opacity: 0; }
+      1.2%       { opacity: 0.7; }
+      20%         { opacity: 0; }
+      100%       { opacity: 0; }
+    }
+
+    /* ── El prompt ─────────────────────────────────────────────────────
+       El bloque azul es el cursor de la consola: parpadea como el de R, en
+       ciclo propio de 1.06 s. El `>` se aviva un instante con la descarga,
+       como si el rayo entrara por ahí. */
+    .cursor { animation: parpadeo 1.06s steps(1, end) infinite; }
+    @keyframes parpadeo {
+      0%, 49%   { opacity: 0.35; }
+      50%, 100% { opacity: 0; }
+    }
+    .prompt { animation: prompt-vivo 3s steps(1, end) infinite; }
+    @keyframes prompt-vivo {
+      0%,   0.9% { fill: #276DC3; }
+      1.0%       { fill: #7FB2ED; }
+      3.3%       { fill: #276DC3; }
+      5.0%       { fill: #5C98E0; }
+      6.7%, 100% { fill: #276DC3; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .punto, .vector, .rayo-linea, .rayo-resplandor, .cursor, .prompt {
+        animation: none;
+      }
+      .punto  { opacity: 0.92; }
+      .vector { opacity: 0.22; }
+      .rayo-resplandor { opacity: 0; }
+      .cursor { opacity: 0.35; }
+    }
+    /* PALETA CÁLIDA, unificada el 19 de agosto de 2026. El naranja original
+       (#C05621, tono 20°) quedaba a 20° del oro institucional (40°) pero con
+       casi el doble de saturación: ni familia ni contraste, que es lo que el
+       ojo lee como «no combinan». Los cálidos pasan al tono 40, variando
+       saturación y luz. El azul de R (213°) se conserva: está a 8° del azul
+       UNAM pero difiere en saturación y luz, así que sí se lee como familia. */
+    .titulo { font-family: Calibri, Inter, system-ui, sans-serif; fill: #10233D; }
+    .sub    { font-family: Calibri, Inter, system-ui, sans-serif; fill: #5A6373; }
+    .prompt { font-family: "Consolas", "DejaVu Sans Mono", monospace; fill: #276DC3; }
+  </style>
+
+<rect class="vector" x="129.0" y="203.0" width="48.0" height="248.0" rx="8" fill="#276DC3" opacity="0.22"/>
+<rect x="96.0" y="210.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.85" stroke="#878787" stroke-width="1.10"/>
+<rect x="136.0" y="210.0" width="34.0" height="34.0" rx="3.0" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="1.10"/>
+<rect x="176.0" y="210.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.85" stroke="#878787" stroke-width="1.10"/>
+<rect x="216.0" y="210.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.85" stroke="#878787" stroke-width="1.10"/>
+<rect x="256.0" y="210.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.85" stroke="#878787" stroke-width="1.10"/>
+<rect x="96.0" y="250.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.79" stroke="#878787" stroke-width="1.10"/>
+<rect x="136.0" y="250.0" width="34.0" height="34.0" rx="3.0" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="1.10"/>
+<rect x="176.0" y="250.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.79" stroke="#878787" stroke-width="1.10"/>
+<rect x="216.0" y="250.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.79" stroke="#878787" stroke-width="1.10"/>
+<rect x="256.0" y="250.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.79" stroke="#878787" stroke-width="1.10"/>
+<rect x="96.0" y="290.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.73" stroke="#878787" stroke-width="1.10"/>
+<rect x="136.0" y="290.0" width="34.0" height="34.0" rx="3.0" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="1.10"/>
+<rect x="176.0" y="290.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.73" stroke="#878787" stroke-width="1.10"/>
+<rect x="216.0" y="290.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.73" stroke="#878787" stroke-width="1.10"/>
+<rect x="256.0" y="290.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.73" stroke="#878787" stroke-width="1.10"/>
+<rect x="96.0" y="330.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.67" stroke="#878787" stroke-width="1.10"/>
+<rect x="136.0" y="330.0" width="34.0" height="34.0" rx="3.0" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="1.10"/>
+<rect x="176.0" y="330.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.67" stroke="#878787" stroke-width="1.10"/>
+<rect x="216.0" y="330.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.67" stroke="#878787" stroke-width="1.10"/>
+<rect x="256.0" y="330.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.67" stroke="#878787" stroke-width="1.10"/>
+<rect x="96.0" y="370.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.61" stroke="#878787" stroke-width="1.10"/>
+<rect x="136.0" y="370.0" width="34.0" height="34.0" rx="3.0" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="1.10"/>
+<rect x="176.0" y="370.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.61" stroke="#878787" stroke-width="1.10"/>
+<rect x="216.0" y="370.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.61" stroke="#878787" stroke-width="1.10"/>
+<rect x="256.0" y="370.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.61" stroke="#878787" stroke-width="1.10"/>
+<rect x="96.0" y="410.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.55" stroke="#878787" stroke-width="1.10"/>
+<rect x="136.0" y="410.0" width="34.0" height="34.0" rx="3.0" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="1.10"/>
+<rect x="176.0" y="410.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.55" stroke="#878787" stroke-width="1.10"/>
+<rect x="216.0" y="410.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.55" stroke="#878787" stroke-width="1.10"/>
+<rect x="256.0" y="410.0" width="34.0" height="34.0" rx="3.0" fill="#E3EDF9" fill-opacity="0.55" stroke="#878787" stroke-width="1.10"/>
+<polyline class="rayo-resplandor" points="332.0,390.0 368.0,346.0 400.0,362.0 436.0,298.0 472.0,314.0 500.0,258.0" fill="none" stroke="#F3CE72" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline class="rayo-linea" points="332.0,390.0 368.0,346.0 400.0,362.0 436.0,298.0 472.0,314.0 500.0,258.0" fill="none" stroke="#D5A034" stroke-width="2.40" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.55"/>
+<circle class="punto" cx="332.0" cy="390.0" r="7.0" fill="#A7781B" style="animation-delay: 0.00s"/>
+<circle class="punto" cx="368.0" cy="346.0" r="7.0" fill="#A7781B" style="animation-delay: 0.22s"/>
+<circle class="punto" cx="400.0" cy="362.0" r="7.0" fill="#A7781B" style="animation-delay: 0.44s"/>
+<circle class="punto" cx="436.0" cy="298.0" r="7.0" fill="#A7781B" style="animation-delay: 0.66s"/>
+<circle class="punto" cx="472.0" cy="314.0" r="7.0" fill="#A7781B" style="animation-delay: 0.88s"/>
+<circle class="punto" cx="500.0" cy="258.0" r="7.0" fill="#A7781B" style="animation-delay: 1.10s"/>
+<text class="prompt" x="92" y="164" font-size="54" font-weight="700">&gt;</text>
+<rect class="cursor" x="130" y="132" width="20" height="42" fill="#276DC3" opacity="0.35"/>
+</svg>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introducción a R · Maestría en Ciencias Médicas, UNAM · 2027-1</title>
+<style>
+  /* ── ESTRUCTURA, heredada del índice del módulo de single-cell (LCG-EJ):
+       banner de identidad a todo lo ancho, franja de datos debajo y las
+       tarjetas en UNA columna. La lista vertical se lee de corrido y no obliga
+       a saltar entre columnas para seguir el orden de los temas.
+
+       Resuelve además dos defectos de la versión en rejilla:
+
+       1. ALINEACIÓN. El texto iba a un margen izquierdo y el motivo estaba
+          centrado en su columna: dos lógicas de alineación en la misma banda.
+          Ahora todo arranca del mismo margen.
+       2. JERARQUÍA POR ESCALA. El motivo —decorativo— medía unas tres veces el
+          logotipo institucional, invirtiendo el orden de importancia. Ahora el
+          motivo vive DENTRO del banner, que es la identidad del curso, y el
+          logotipo del Programa va en la franja de datos a un tamaño legible.
+
+       Lo que NO se hereda de LCG-EJ es la paleta: es otra entidad y su oro sale
+       del logotipo de la licenciatura. Su oro de etiquetas (#937E00) da 4.02:1
+       sobre blanco, que tampoco alcanza el 4.5 de AA en texto pequeño; el
+       derivado de aquí da 5.81:1. */
+  :root {
+    --unam-azul: #293E6B;       /* Pantone 534 C */
+    --unam-oro: #B6985E;        /* Pantone 465 C — filetes y bordes, NUNCA texto */
+    --unam-oro-osc: #7A6230;    /* derivado — texto sobre blanco, 5.81:1 */
+    --unam-azul-osc: #1B2A4A;
+    --unam-azul-suave: #E9EDF5;
+    --unam-oro-suave: #F3EDE1;
+    --gris: #5A6373;
+
+    /* Escala tipográfica, razón ~1.25. Ningún tamaño se declara fuera de aquí. */
+    --t-etiqueta: 0.8125rem;  /* 13 px */
+    --t-menor:    0.875rem;   /* 14 px */
+    --t-cuerpo:   1rem;       /* 16 px */
+    --t-tarjeta:  1.125rem;   /* 18 px */
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Inter", "Helvetica Neue", system-ui, sans-serif;
+    color: var(--unam-azul-osc);
+    background: #fff;
+    line-height: 1.55;
+  }
+
+  /* El azul institucional sostiene el encabezado. Sin el, la pagina entera
+     quedaba blanca y el curso perdia la marca de la UNAM a primera vista.
+     El banner conserva SU fondo blanco —es la ilustracion— y se apoya encima
+     como una tarjeta: asi no hay que redibujarlo para fondo oscuro, donde su
+     texto azul marino seria ilegible. */
+  header {
+    background: var(--unam-azul);
+    border-bottom: 6px solid var(--unam-oro);
+    padding: 1.6rem 1.5rem 0;
+  }
+  header .identidad {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0,0,0,.18);
+  }
+  header .datos {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.2rem 0 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: #fff;
+  }
+  /* 110 px: el archivo contiene texto —«475+», «Universidad de México»— y por
+     debajo de ~100 px deja de leerse. Ver la PROCEDENCIA.md de su carpeta: es
+     identidad institucional y NO la cubre la licencia del repositorio. */
+  header .datos img {
+    width: 110px;
+    height: auto;
+    flex-shrink: 0;
+    /* El logotipo ya trae su propio disco blanco. El halo lo despega del azul
+       sin recortarlo ni recolorearlo, que es lo que prohíbe su PROCEDENCIA.md. */
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,.12);
+  }
+  /* Sobre el azul: blanco puro da 10.52:1 y al 88 % da 8.57:1. El oro
+     institucional daría 3.83:1, que no alcanza para texto pequeño. */
+  header .datos .texto { color: rgba(255,255,255,.88); font-size: var(--t-menor); }
+  header .datos p { margin: .15rem 0; }
+  header .datos strong { color: #fff; }
+  @media (max-width: 560px) {
+    header .datos { flex-direction: column; align-items: flex-start; }
+  }
+
+  main { max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  h2 {
+    font-size: var(--t-tarjeta);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--unam-azul);
+    border-bottom: 2px solid var(--unam-oro);
+    padding-bottom: .4rem;
+    margin: 2.5rem 0 1.2rem;
+  }
+  h2:first-of-type { margin-top: 0; }
+
+  .cards { display: grid; gap: .9rem; }   /* una sola columna: lista vertical */
+  a.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #DCE1EA;
+    border-left: 5px solid var(--unam-oro);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    transition: background .15s ease, transform .15s ease;
+  }
+  a.card:hover { background: var(--unam-azul-suave); transform: translateX(3px); }
+  .card .num {
+    font-size: var(--t-etiqueta);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--unam-oro-osc);
+    font-weight: 700;
+  }
+  .card .tit { font-size: var(--t-tarjeta); font-weight: 600; margin: .15rem 0 .3rem; }
+  .card .meta { font-size: var(--t-menor); color: var(--gris); }
+
+  /* Material que no está en el sitio abierto: se dice ANTES del clic. */
+  a.card.restringido { border-left-color: #C9D0DC; }
+  .card .candado {
+    display: inline-block;
+    margin-top: .5rem;
+    padding: .15rem .45rem;
+    border: 1px solid var(--unam-oro-osc);
+    border-radius: 4px;
+    font-size: var(--t-etiqueta);
+    color: var(--unam-oro-osc);
+  }
+
+  .aviso {
+    background: var(--unam-oro-suave);
+    border-left: 5px solid var(--unam-oro);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    font-size: var(--t-menor);
+    margin: 1.5rem 0 0;
+  }
+
+  footer {
+    background: var(--unam-azul-suave);
+    border-top: 1px solid #D5DCE9;
+    padding: 1.5rem;
+    font-size: var(--t-menor);
+    color: var(--gris);
+    text-align: center;
+  }
+  footer a { color: var(--unam-azul); }
+
+  /* ── Tarjetas que todavía no se publican ────────────────────────────────
+     El índice se genera con scripts/python/gatear-indice.py. Una tarjeta no
+     liberada deja de ser <a> y pasa a <div>, así que necesita sus propias
+     reglas: toda la hoja está escrita para `a.card` y un div se quedaría sin
+     borde ni caja. */
+  div.card {
+    display: block;
+    border: 1px solid #DCE1EA;
+    border-left: 5px solid #C9D0DC;
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    background: #FBFCFD;
+  }
+  div.card .tit { color: #5A6373; }   /* 6.06:1 sobre el fondo claro */
+  .card .pendiente-nota {
+    display: inline-block;
+    margin-top: .5rem;
+    padding: .15rem .45rem;
+    border: 1px dashed #5A6373;
+    border-radius: 4px;
+    font-size: var(--t-etiqueta);
+    color: #5A6373;
+  }
+
+  </style>
+</head>
+<body>
+
+<header>
+  
+  <img class="identidad" src="assets/images/identidad-intro-r.svg"
+       alt="Introducción a R · Maestría en Ciencias Médicas, Odontológicas y de la Salud, UNAM · Semestre 2027-1">
+  <div class="datos">
+    <img src="assets/images/institucional/logotipo-posgrado-mcmos.png"
+         alt="Programa de Maestría y Doctorado en Ciencias Médicas, Odontológicas y de la Salud, UNAM">
+    <div class="texto">
+      <p><strong>Dra. Yalbi Itzel Balderas-Martínez</strong> · profesora titular</p>
+      <p><strong>Ing. Luis Alberto Meza Cova</strong> · profesor adjunto</p>
+      <p>Laboratorio de Biología Computacional, INER · Modalidad en línea</p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <h2>Temas</h2>
+  <div class="cards">
+
+    <a class="card" href="00-encuadre.html">
+      <span class="num">Presentación</span>
+      <div class="tit">Encuadre</div>
+      <div class="meta">Qué es R, para qué sirve en investigación en salud y cómo está armado el curso.</div>
+    </a>
+
+    <a class="card" href="01a-apertura.html">
+      <span class="num">Tema 01 · Apertura</span>
+      <div class="tit">R como calculadora y tus primeros vectores</div>
+      <div class="meta">Dra. Yalbi Itzel Balderas-Martínez</div>
+    </a>
+
+    <a class="card" href="01-primeros-pasos-en-r.html">
+      <span class="num">Tema 01</span>
+      <div class="tit">Primeros pasos en R</div>
+      <div class="meta">Ing. Luis Alberto Meza Cova · la consola, la ayuda, los paquetes, variables y nombres</div>
+    </a>
+
+    <a class="card" href="02-tipos-y-estructuras-de-datos.html">
+      <span class="num">Tema 02</span>
+      <div class="tit">Tipos y estructuras de datos</div>
+      <div class="meta">Ing. Luis Alberto Meza Cova · vectores, matrices, factores, data frames y listas</div>
+    </a>
+
+    <div class="card restringido">
+      <span class="num">Tema 03</span>
+      <div class="tit">Visualización de datos</div>
+      <div class="meta">Dra. Yalbi Itzel Balderas-Martínez · por qué una figura funciona, o no</div>
+      <span class="candado">Solo para el grupo inscrito</span>
+    </div>
+
+    <div class="card pendiente">
+      <span class="num">Tema 04</span>
+      <div class="tit">Visualización con ggplot2</div>
+      <div class="meta">Ing. Luis Alberto Meza Cova · la gramática de los gráficos, después de los principios</div>
+      <span class="pendiente-nota">Se publica al terminar su sesión</span>
+    </div>
+
+    
+
+  </div>
+
+  <div class="aviso">
+    El material se publica <strong>conforme se va dando</strong>. Los temas que
+    aparecen en gris se habilitan al terminar su sesión. Si algo que ya viste no
+    aparece aquí, escríbelo en Google&nbsp;Classroom.
+  </div>
+
+  <div class="aviso">
+    Un tema <strong>no equivale a una sesión</strong>: unos se dan en media clase
+    y otros ocupan dos.
+  </div>
+
+  <h2>Material de apoyo</h2>
+  <div class="cards">
+
+    <a class="card" href="manual/index.html">
+      <span class="num">Manual</span>
+      <div class="tit">Versión escrita del curso</div>
+      <div class="meta">Para consultar después de clase, con más detalle que las diapositivas.</div>
+    </a>
+
+    <a class="card" href="notebooks/01-practica-primeros-pasos.html">
+      <span class="num">Práctica · tema 01</span>
+      <div class="tit">Primeros pasos</div>
+      <div class="meta">Los ejercicios con su respuesta y su salida. Se abren en el navegador; no hace falta instalar nada.</div>
+    </a>
+
+    <a class="card" href="notebooks/02-practica-estructuras-de-datos.html">
+      <span class="num">Práctica · tema 02</span>
+      <div class="tit">Estructuras de datos</div>
+      <div class="meta">Vectores, matrices, factores y data frames.</div>
+    </a>
+
+    
+
+    <div class="card pendiente">
+      <span class="num">Práctica · tema 04</span>
+      <div class="tit">ggplot2</div>
+      <div class="meta">La gramática de los gráficos, capa por capa.</div>
+      <span class="pendiente-nota">Se publica al terminar su sesión</span>
+    </div>
+
+  </div>
+
+  <div class="aviso">
+    Para cualquier duda del curso, escríbenos por <strong>Google Classroom</strong>.
+  </div>
+
+</main>
+
+<footer>
+  Material docente bajo
+  <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es">CC BY-NC 4.0</a> ·
+  Código bajo MIT · Laboratorio de Biología Computacional, INER
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>1&nbsp; Encuadre – Introducción a R</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./01-primeros-pasos-en-r.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-f435bf1f50e020e84cf1ac501ecc559f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0cfc027574ca2582acc94966f2b247bd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script><style>html{ scroll-behavior: smooth; }</style>
+</head>
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./00-encuadre.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Encuadre</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introducción a R</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./00-encuadre.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Encuadre</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-primeros-pasos-en-r.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-tipos-y-estructuras-de-datos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tipos y estructuras de datos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Anexos</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./90-anexo-posit-cloud.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Anexo · Posit Cloud</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./91-anexo-glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Anexo · Glosario</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./92-anexo-errores-frecuentes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Anexo · Errores frecuentes</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./99-referencias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">En este capítulo</h2>
+   
+  <ul>
+<li><a href="#ciencia-de-datos" id="toc-ciencia-de-datos" class="nav-link active" data-scroll-target="#ciencia-de-datos"><span class="header-section-number">1.1</span> Ciencia de datos</a></li>
+  <li>
+<a href="#qu%C3%A9-es-r" id="toc-qué-es-r" class="nav-link" data-scroll-target="#qu%C3%A9-es-r"><span class="header-section-number">1.2</span> Qué es R</a>
+  <ul class="collapse">
+<li><a href="#ventajas" id="toc-ventajas" class="nav-link" data-scroll-target="#ventajas"><span class="header-section-number">1.2.1</span> Ventajas</a></li>
+  <li><a href="#desventajas" id="toc-desventajas" class="nav-link" data-scroll-target="#desventajas"><span class="header-section-number">1.2.2</span> Desventajas</a></li>
+  </ul>
+</li>
+  <li><a href="#qu%C3%A9-es-rstudio" id="toc-qué-es-rstudio" class="nav-link" data-scroll-target="#qu%C3%A9-es-rstudio"><span class="header-section-number">1.3</span> Qué es RStudio</a></li>
+  <li><a href="#d%C3%B3nde-vamos-a-trabajar" id="toc-dónde-vamos-a-trabajar" class="nav-link" data-scroll-target="#d%C3%B3nde-vamos-a-trabajar"><span class="header-section-number">1.4</span> Dónde vamos a trabajar</a></li>
+  <li>
+<a href="#por-qu%C3%A9-escribir-el-an%C3%A1lisis" id="toc-por-qué-escribir-el-análisis" class="nav-link" data-scroll-target="#por-qu%C3%A9-escribir-el-an%C3%A1lisis"><span class="header-section-number">1.5</span> Por qué escribir el análisis</a>
+  <ul class="collapse">
+<li><a href="#un-primer-ejemplo" id="toc-un-primer-ejemplo" class="nav-link" data-scroll-target="#un-primer-ejemplo"><span class="header-section-number">1.5.1</span> Un primer ejemplo</a></li>
+  </ul>
+</li>
+  <li><a href="#de-qu%C3%A9-trata-el-curso" id="toc-de-qué-trata-el-curso" class="nav-link" data-scroll-target="#de-qu%C3%A9-trata-el-curso"><span class="header-section-number">1.6</span> De qué trata el curso</a></li>
+  <li><a href="#evaluaci%C3%B3n" id="toc-evaluación" class="nav-link" data-scroll-target="#evaluaci%C3%B3n"><span class="header-section-number">1.7</span> Evaluación</a></li>
+  <li><a href="#material-de-apoyo" id="toc-material-de-apoyo" class="nav-link" data-scroll-target="#material-de-apoyo"><span class="header-section-number">1.8</span> Material de apoyo</a></li>
+  <li><a href="#sesi%C3%B3n-de-r" id="toc-sesión-de-r" class="nav-link" data-scroll-target="#sesi%C3%B3n-de-r"><span class="header-section-number">1.9</span> Sesión de R</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">
+<span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Encuadre</span>
+</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><p>Este capítulo es la versión escrita del deck <code>slides/00-encuadre.qmd</code>. Su contenido proviene de la clase 0 de la edición anterior del curso, reorganizado para leerse fuera del aula.</p>
+<section id="ciencia-de-datos" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="ciencia-de-datos">
+<span class="header-section-number">1.1</span> Ciencia de datos</h2>
+<p>La ciencia de datos es un campo interdisciplinario que usa métodos, procesos, algoritmos y sistemas científicos para extraer conocimiento de datos, estén organizados en una tabla o no.</p>
+<p>La forma más común de describirla es como la intersección de tres círculos: matemáticas y estadística, cómputo, y <strong>conocimiento del dominio</strong>.</p>
+<div id="fig-venn-general" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-venn-general-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/clase0-heredadas/data_science.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-venn-general-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1.1: Ciencia de datos según el NIST Big Data Working Group
+</figcaption></figure>
+</div>
+<p>Ese tercer círculo es el que importa aquí. En biología y salud, el conocimiento del dominio es el que tú ya traes: es la parte que no se aprende en un curso de programación.</p>
+<div id="fig-venn-bio" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-venn-bio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/clase0-heredadas/bioinformatics.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-venn-bio-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1.2: El mismo diagrama, aplicado a biología
+</figcaption></figure>
+</div>
+</section><section id="qué-es-r" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="qué-es-r">
+<span class="header-section-number">1.2</span> Qué es R</h2>
+<p>R es un ambiente de software libre para cómputo estadístico y gráficos. Compila y corre en Windows, macOS y Linux.</p>
+<p>Lo desarrollaron personas expertas en estadística a partir del lenguaje S, creado por John Chambers y colegas en los Laboratorios Bell (hoy Lucent Technologies).</p>
+<section id="ventajas" class="level3" data-number="1.2.1"><h3 data-number="1.2.1" class="anchored" data-anchor-id="ventajas">
+<span class="header-section-number">1.2.1</span> Ventajas</h3>
+<ul>
+<li>Es libre: no depende de una licencia que se venza ni de un presupuesto.</li>
+<li>Las figuras y gráficos que produce son de calidad de publicación.</li>
+<li>Se extiende instalando paquetes.</li>
+<li>Fue hecho por y para gente que analiza datos, no adaptado desde otro fin.</li>
+</ul></section><section id="desventajas" class="level3" data-number="1.2.2"><h3 data-number="1.2.2" class="anchored" data-anchor-id="desventajas">
+<span class="header-section-number">1.2.2</span> Desventajas</h3>
+<ul>
+<li>Requiere tiempo de entrenamiento: para personalizar un resultado hay que conocer el lenguaje.</li>
+<li>Algunos paquetes están mal documentados, abandonados, o no son la mejor herramienta para el problema.</li>
+<li>Ciertas tareas se resuelven más fácil en otro lenguaje.</li>
+</ul></section></section><section id="qué-es-rstudio" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="qué-es-rstudio">
+<span class="header-section-number">1.3</span> Qué es RStudio</h2>
+<p>Un ambiente de desarrollo integrado (IDE): consola, editor, herramientas gráficas y manejo del área de trabajo en una sola ventana.</p>
+<p>R es el motor; RStudio es el tablero desde el que lo manejas. Puedes usar R sin RStudio, pero es más incómodo.</p>
+</section><section id="dónde-vamos-a-trabajar" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="dónde-vamos-a-trabajar">
+<span class="header-section-number">1.4</span> Dónde vamos a trabajar</h2>
+<p>En este curso <strong>no instalas nada</strong>. Usamos <a href="https://posit.cloud">Posit Cloud</a>: el mismo RStudio, corriendo en un servidor en vez de en tu computadora. Se abre en el navegador con una cuenta gratuita.</p>
+<p>La razón es práctica. Instalar R y RStudio en cada computadora convierte la primera sesión en soporte técnico —versiones distintas, permisos de administrador, antivirus— y se va la clase sin haber escrito una línea de R. En la nube todas trabajamos sobre el mismo R, con los mismos paquetes, y un problema se resuelve una sola vez.</p>
+<p>No es una versión reducida: lo que aprendas aquí funciona igual el día que instales R en tu máquina.</p>
+<p>Cómo crear la cuenta y qué esperar del plan gratuito: ver el <a href="./90-anexo-posit-cloud.html">anexo de Posit Cloud</a>.</p>
+</section><section id="por-qué-escribir-el-análisis" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="por-qué-escribir-el-análisis">
+<span class="header-section-number">1.5</span> Por qué escribir el análisis</h2>
+<p>En una hoja de cálculo, las operaciones se hacen a mano y no queda registro de ellas. Seis meses después nadie —ni tú— puede decir con certeza qué celdas se tocaron.</p>
+<p>En R, cada paso se escribe como una instrucción, y el archivo de instrucciones <strong>es</strong> el registro del análisis. Si un revisor pregunta cómo obtuviste una cifra, la respuesta es ese archivo: se vuelve a correr y produce el mismo resultado.</p>
+<p>Esa propiedad se llama <strong>reproducibilidad</strong> y es la razón de fondo de este curso.</p>
+<section id="un-primer-ejemplo" class="level3" data-number="1.5.1"><h3 data-number="1.5.1" class="anchored" data-anchor-id="un-primer-ejemplo">
+<span class="header-section-number">1.5.1</span> Un primer ejemplo</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">edades</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">34</span>, <span class="fl">41</span>, <span class="fl">28</span>, <span class="fl">55</span>, <span class="fl">47</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">edades</span><span class="op">)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 41</code></pre>
+</div>
+</div>
+<p>La primera línea guarda cinco edades en un objeto llamado <code>edades</code>. La segunda pide su promedio.</p>
+<p>El nombre va en plural a propósito: guarda cinco valores, no uno. En la sesión 01 se usa <code>edad</code> para un solo número y <code>edades</code> para el vector, y conviene que diga lo mismo desde aquí.</p>
+</section></section><section id="de-qué-trata-el-curso" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="de-qué-trata-el-curso">
+<span class="header-section-number">1.6</span> De qué trata el curso</h2>
+<p>Un curso introductorio para aprender a programar en R y adquirir nociones de cómo analizar tus propios datos. No se requieren conocimientos previos de programación.</p>
+</section><section id="evaluación" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="evaluación">
+<span class="header-section-number">1.7</span> Evaluación</h2>
+<table class="caption-top table">
+<thead><tr class="header">
+<th>Componente</th>
+<th>Peso</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Tareas en DataCamp</td>
+<td>20 %</td>
+</tr>
+<tr class="even">
+<td>Primer examen</td>
+<td>25 %</td>
+</tr>
+<tr class="odd">
+<td>Segundo examen</td>
+<td>25 %</td>
+</tr>
+<tr class="even">
+<td>Proyecto final en R</td>
+<td>30 %</td>
+</tr>
+</tbody>
+</table>
+<p>Asistencia mínima: <strong>80 %</strong>.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Criterios heredados de la edición anterior del curso. Se confirman para el semestre 2027-1 en <code>docs/programa-operativo/</code>.</p>
+</div>
+</div>
+</div>
+</section><section id="material-de-apoyo" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="material-de-apoyo">
+<span class="header-section-number">1.8</span> Material de apoyo</h2>
+<p>Además del material de este repositorio, el curso ha usado <a href="https://learn.datacamp.com/">DataCamp</a> a través del programa <em>DataCamp for the Classroom</em>, que da acceso completo a la plataforma mientras el curso esté inscrito.</p>
+<p>Lecturas de apoyo sobre qué es la ciencia de datos y cómo aprender R:</p>
+<ul>
+<li><a href="https://www.datacamp.com/es/blog/what-is-data-science-the-definitive-guide" class="uri">https://www.datacamp.com/es/blog/what-is-data-science-the-definitive-guide</a></li>
+<li><a href="https://www.datacamp.com/blog/learn-r" class="uri">https://www.datacamp.com/blog/learn-r</a></li>
+</ul></section><section id="sesión-de-r" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="sesión-de-r">
+<span class="header-section-number">1.9</span> Sesión de R</h2>
+<p>Al cerrar cada análisis conviene registrar con qué versiones se corrió. Es lo que permite explicar, meses después, por qué un resultado cambió:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu">session_info</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+
+<!-- -->
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Presentación">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Presentación</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./01-primeros-pasos-en-r.html" class="pagination-link" aria-label="Primeros pasos en R">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Primeros pasos en R</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Encuadre</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Este capítulo es la versión escrita del deck <span class="in">`slides/00-encuadre.qmd`</span>. Su</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>contenido proviene de la clase 0 de la edición anterior del curso, reorganizado</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>para leerse fuera del aula.</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Ciencia de datos</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>La ciencia de datos es un campo interdisciplinario que usa métodos, procesos,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>algoritmos y sistemas científicos para extraer conocimiento de datos, estén</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>organizados en una tabla o no.</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>La forma más común de describirla es como la intersección de tres círculos:</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>matemáticas y estadística, cómputo, y **conocimiento del dominio**.</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="al">![Ciencia de datos según el NIST Big Data Working Group](assets/images/clase0-heredadas/data_science.png)</span>{#fig-venn-general}</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>Ese tercer círculo es el que importa aquí. En biología y salud, el conocimiento</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>del dominio es el que tú ya traes: es la parte que no se aprende en un curso de</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>programación.</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="al">![El mismo diagrama, aplicado a biología](assets/images/clase0-heredadas/bioinformatics.png)</span>{#fig-venn-bio}</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Qué es R</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>R es un ambiente de software libre para cómputo estadístico y gráficos. Compila</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>y corre en Windows, macOS y Linux.</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>Lo desarrollaron personas expertas en estadística a partir del lenguaje S,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>creado por John Chambers y colegas en los Laboratorios Bell (hoy Lucent</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>Technologies).</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="fu">### Ventajas</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Es libre: no depende de una licencia que se venza ni de un presupuesto.</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Las figuras y gráficos que produce son de calidad de publicación.</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Se extiende instalando paquetes.</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fue hecho por y para gente que analiza datos, no adaptado desde otro fin.</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="fu">### Desventajas</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requiere tiempo de entrenamiento: para personalizar un resultado hay que</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>  conocer el lenguaje.</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Algunos paquetes están mal documentados, abandonados, o no son la mejor</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>  herramienta para el problema.</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ciertas tareas se resuelven más fácil en otro lenguaje.</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Qué es RStudio</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>Un ambiente de desarrollo integrado (IDE): consola, editor, herramientas</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>gráficas y manejo del área de trabajo en una sola ventana.</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>R es el motor; RStudio es el tablero desde el que lo manejas. Puedes usar R sin</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>RStudio, pero es más incómodo.</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dónde vamos a trabajar</span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>En este curso **no instalas nada**. Usamos</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Posit Cloud</span><span class="co">](https://posit.cloud)</span>: el mismo RStudio, corriendo en un servidor</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>en vez de en tu computadora. Se abre en el navegador con una cuenta gratuita.</span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>La razón es práctica. Instalar R y RStudio en cada computadora convierte la</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>primera sesión en soporte técnico —versiones distintas, permisos de</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>administrador, antivirus— y se va la clase sin haber escrito una línea de R.</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>En la nube todas trabajamos sobre el mismo R, con los mismos paquetes, y un</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>problema se resuelve una sola vez.</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>No es una versión reducida: lo que aprendas aquí funciona igual el día que</span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>instales R en tu máquina.</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>Cómo crear la cuenta y qué esperar del plan gratuito: ver el</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">anexo de Posit Cloud</span><span class="co">](90-anexo-posit-cloud.qmd)</span>.</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## Por qué escribir el análisis</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>En una hoja de cálculo, las operaciones se hacen a mano y no queda registro de</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>ellas. Seis meses después nadie —ni tú— puede decir con certeza qué celdas se</span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>tocaron.</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>En R, cada paso se escribe como una instrucción, y el archivo de instrucciones</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>**es** el registro del análisis. Si un revisor pregunta cómo obtuviste una</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>cifra, la respuesta es ese archivo: se vuelve a correr y produce el mismo</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>resultado.</span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>Esa propiedad se llama **reproducibilidad** y es la razón de fondo de este</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>curso.</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### Un primer ejemplo</span></span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>edades <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">34</span>, <span class="dv">41</span>, <span class="dv">28</span>, <span class="dv">55</span>, <span class="dv">47</span>)</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(edades)</span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>La primera línea guarda cinco edades en un objeto llamado <span class="in">`edades`</span>. La segunda</span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>pide su promedio.</span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>El nombre va en plural a propósito: guarda cinco valores, no uno. En la sesión</span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>01 se usa <span class="in">`edad`</span> para un solo número y <span class="in">`edades`</span> para el vector, y conviene que</span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>diga lo mismo desde aquí.</span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## De qué trata el curso</span></span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a>Un curso introductorio para aprender a programar en R y adquirir nociones de</span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>cómo analizar tus propios datos. No se requieren conocimientos previos de</span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>programación.</span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evaluación</span></span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Componente <span class="pp">|</span> Peso <span class="pp">|</span></span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a><span class="pp">|---|---|</span></span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Tareas en DataCamp <span class="pp">|</span> 20 % <span class="pp">|</span></span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Primer examen <span class="pp">|</span> 25 % <span class="pp">|</span></span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Segundo examen <span class="pp">|</span> 25 % <span class="pp">|</span></span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Proyecto final en R <span class="pp">|</span> 30 % <span class="pp">|</span></span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>Asistencia mínima: **80 %**.</span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>Criterios heredados de la edición anterior del curso. Se confirman para el</span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>semestre 2027-1 en <span class="in">`docs/programa-operativo/`</span>.</span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## Material de apoyo</span></span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a>Además del material de este repositorio, el curso ha usado</span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">DataCamp</span><span class="co">](https://learn.datacamp.com/)</span> a través del programa *DataCamp for the</span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a>Classroom*, que da acceso completo a la plataforma mientras el curso esté</span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>inscrito.</span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>Lecturas de apoyo sobre qué es la ciencia de datos y cómo aprender R:</span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="ot">&lt;https://www.datacamp.com/es/blog/what-is-data-science-the-definitive-guide&gt;</span></span>
+<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="ot">&lt;https://www.datacamp.com/blog/learn-r&gt;</span></span>
+<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a><span class="fu">## Sesión de R</span></span>
+<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a>Al cerrar cada análisis conviene registrar con qué versiones se corrió. Es lo</span>
+<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a>que permite explicar, meses después, por qué un resultado cambió:</span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span>
+<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Introducción a R · UNAM–INER · <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es">CC BY-NC 4.0</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Hecho con <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
