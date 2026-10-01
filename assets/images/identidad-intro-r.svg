@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="Introducción a R · Maestría en Ciencias Médicas, Odontológicas y de la Salud, UNAM · Semestre 2027-1">
+
+  <style>
+    .punto {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: latir 4.5s ease-in-out infinite;
+    }
+    .vector { animation: brillar 4.5s ease-in-out infinite; }
+    @keyframes latir {
+      0%, 100% { transform: scale(1); opacity: 0.92; }
+      50%      { transform: scale(1.18); opacity: 1; }
+    }
+    @keyframes brillar {
+      0%, 100% { opacity: 0.22; }
+      50%      { opacity: 0.45; }
+    }
+    /* ── Chispazo ──────────────────────────────────────────────────────
+       El rayo es la propia serie de datos: la polilinea que une los puntos ya
+       zigzaguea hacia arriba y al descargarse se lee como un relampago. Lo que
+       ilumina la portada son los datos, no un adorno encima de ellos. */
+    .rayo-linea { animation: descarga 3s steps(1, end) infinite; }
+    .rayo-resplandor {
+      opacity: 0;
+      filter: blur(5px);
+      animation: rescoldo 3s ease-out infinite;
+    }
+    @keyframes descarga {
+      0%,   0.9% { stroke: #D5A034; stroke-width: 1.49; stroke-opacity: 0.55; }
+      1.0%       { stroke: #F8DB96; stroke-width: 4.2;  stroke-opacity: 1.00; }
+      3.3%       { stroke: #D5A034; stroke-width: 1.49; stroke-opacity: 0.55; }
+      5.0%       { stroke: #F3CE72; stroke-width: 3.2;  stroke-opacity: 0.95; }
+      6.7%, 100% { stroke: #D5A034; stroke-width: 1.49; stroke-opacity: 0.55; }
+    }
+    @keyframes rescoldo {
+      0%,   0.9% { opacity: 0; }
+      1.2%       { opacity: 0.7; }
+      20%         { opacity: 0; }
+      100%       { opacity: 0; }
+    }
+    .prompt-vivo { animation: prompt-vivo 3s steps(1, end) infinite; }
+    @keyframes prompt-vivo {
+      0%,   0.9% { fill: #276DC3; }
+      1.0%       { fill: #7FB2ED; }
+      3.3%       { fill: #276DC3; }
+      5.0%       { fill: #5C98E0; }
+      6.7%, 100% { fill: #276DC3; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .punto, .vector, .rayo-linea, .rayo-resplandor, .prompt-vivo {
+        animation: none;
+      }
+      .rayo-resplandor { opacity: 0; }
+      .punto  { opacity: 0.92; }
+      .vector { opacity: 0.22; }
+    }
+    /* PALETA CÁLIDA, unificada el 19 de agosto de 2026. El naranja original
+       (#C05621, tono 20°) quedaba a 20° del oro institucional (40°) pero con
+       casi el doble de saturación: ni familia ni contraste, que es lo que el
+       ojo lee como «no combinan». Los cálidos pasan al tono 40, variando
+       saturación y luz. El azul de R (213°) se conserva: está a 8° del azul
+       UNAM pero difiere en saturación y luz, así que sí se lee como familia. */
+    .titulo { font-family: Calibri, Inter, system-ui, sans-serif; fill: #10233D; }
+    .sub    { font-family: Calibri, Inter, system-ui, sans-serif; fill: #5A6373; }
+    .prompt { font-family: "Consolas", "DejaVu Sans Mono", monospace; fill: #276DC3; }
+  </style>
+
+<rect x="0" y="0" width="1200" height="300" fill="#FFFFFF"/>
+<rect x="0" y="292" width="1200" height="8" fill="#A7781B"/>
+<text class="prompt prompt-vivo" x="72" y="118" font-size="46" font-weight="700">&gt;</text>
+<text class="titulo" x="118" y="118" font-size="62" font-weight="700">Introducción a R</text>
+<text class="sub" x="120" y="170" font-size="27">De la consola a la gráfica</text>
+<!-- El texto arranca en x=120 y la retícula del motivo empieza en x=836: el
+     ancho útil son 690 px, NO los 1200 del lienzo. En una línea, este subtítulo
+     medía 771 px y se metía debajo del gráfico. Va en dos. -->
+<text class="sub" x="120" y="212" font-size="22">Maestría en Ciencias Médicas, Odontológicas y de la Salud</text>
+<text class="sub" x="120" y="248" font-size="22">UNAM · Semestre 2027-1</text>
+<rect class="vector" x="855.8" y="69.0" width="31.1" height="155.1" rx="6" fill="#276DC3" opacity="0.22"/>
+<rect x="836.0" y="74.0" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.85" stroke="#878787" stroke-width="0.68"/>
+<rect x="860.8" y="74.0" width="21.1" height="21.1" rx="1.9" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="0.68"/>
+<rect x="885.6" y="74.0" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.85" stroke="#878787" stroke-width="0.68"/>
+<rect x="910.4" y="74.0" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.85" stroke="#878787" stroke-width="0.68"/>
+<rect x="935.2" y="74.0" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.85" stroke="#878787" stroke-width="0.68"/>
+<rect x="836.0" y="98.8" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.79" stroke="#878787" stroke-width="0.68"/>
+<rect x="860.8" y="98.8" width="21.1" height="21.1" rx="1.9" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="0.68"/>
+<rect x="885.6" y="98.8" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.79" stroke="#878787" stroke-width="0.68"/>
+<rect x="910.4" y="98.8" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.79" stroke="#878787" stroke-width="0.68"/>
+<rect x="935.2" y="98.8" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.79" stroke="#878787" stroke-width="0.68"/>
+<rect x="836.0" y="123.6" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.73" stroke="#878787" stroke-width="0.68"/>
+<rect x="860.8" y="123.6" width="21.1" height="21.1" rx="1.9" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="0.68"/>
+<rect x="885.6" y="123.6" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.73" stroke="#878787" stroke-width="0.68"/>
+<rect x="910.4" y="123.6" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.73" stroke="#878787" stroke-width="0.68"/>
+<rect x="935.2" y="123.6" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.73" stroke="#878787" stroke-width="0.68"/>
+<rect x="836.0" y="148.4" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.67" stroke="#878787" stroke-width="0.68"/>
+<rect x="860.8" y="148.4" width="21.1" height="21.1" rx="1.9" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="0.68"/>
+<rect x="885.6" y="148.4" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.67" stroke="#878787" stroke-width="0.68"/>
+<rect x="910.4" y="148.4" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.67" stroke="#878787" stroke-width="0.68"/>
+<rect x="935.2" y="148.4" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.67" stroke="#878787" stroke-width="0.68"/>
+<rect x="836.0" y="173.2" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.61" stroke="#878787" stroke-width="0.68"/>
+<rect x="860.8" y="173.2" width="21.1" height="21.1" rx="1.9" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="0.68"/>
+<rect x="885.6" y="173.2" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.61" stroke="#878787" stroke-width="0.68"/>
+<rect x="910.4" y="173.2" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.61" stroke="#878787" stroke-width="0.68"/>
+<rect x="935.2" y="173.2" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.61" stroke="#878787" stroke-width="0.68"/>
+<rect x="836.0" y="198.0" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.55" stroke="#878787" stroke-width="0.68"/>
+<rect x="860.8" y="198.0" width="21.1" height="21.1" rx="1.9" fill="#276DC3" fill-opacity="1.00" stroke="#16457C" stroke-width="0.68"/>
+<rect x="885.6" y="198.0" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.55" stroke="#878787" stroke-width="0.68"/>
+<rect x="910.4" y="198.0" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.55" stroke="#878787" stroke-width="0.68"/>
+<rect x="935.2" y="198.0" width="21.1" height="21.1" rx="1.9" fill="#E3EDF9" fill-opacity="0.55" stroke="#878787" stroke-width="0.68"/>
+<polyline class="rayo-resplandor" points="984.2,185.8 1006.5,158.5 1026.4,168.4 1048.7,128.8 1071.0,138.7 1088.4,104.0" fill="none" stroke="#F3CE72" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline class="rayo-linea" points="984.2,185.8 1006.5,158.5 1026.4,168.4 1048.7,128.8 1071.0,138.7 1088.4,104.0" fill="none" stroke="#D5A034" stroke-width="1.49" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.55"/>
+<circle class="punto" cx="984.2" cy="185.8" r="4.3" fill="#A7781B" style="animation-delay: 0.00s"/>
+<circle class="punto" cx="1006.5" cy="158.5" r="4.3" fill="#A7781B" style="animation-delay: 0.22s"/>
+<circle class="punto" cx="1026.4" cy="168.4" r="4.3" fill="#A7781B" style="animation-delay: 0.44s"/>
+<circle class="punto" cx="1048.7" cy="128.8" r="4.3" fill="#A7781B" style="animation-delay: 0.66s"/>
+<circle class="punto" cx="1071.0" cy="138.7" r="4.3" fill="#A7781B" style="animation-delay: 0.88s"/>
+<circle class="punto" cx="1088.4" cy="104.0" r="4.3" fill="#A7781B" style="animation-delay: 1.10s"/>
+
+</svg>

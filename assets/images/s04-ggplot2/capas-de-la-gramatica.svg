@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 610" width="1010" height="610" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Las ocho piezas de la gramática, en capas</title>
+  <desc id="descripcion">Ocho láminas apiladas. De abajo arriba: datos, estéticas, geometrías, estadísticas, escalas, coordenadas, facetas y tema. Las tres de abajo, en azul oscuro, forman la gráfica mínima. Dibujo propio del curso.</desc>
+  <polygon points="330,590 660,590 716,540 386,540" fill="#1B2A4A" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <text x="523" y="576" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="31" font-weight="600" fill="#FFFFFF" text-anchor="middle">data</text>
+  <text x="314" y="578" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="37" font-weight="600" fill="#1B2A4A" text-anchor="end">1 · Datos</text>
+  <polygon points="330,520 660,520 716,470 386,470" fill="#293E6B" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <text x="523" y="506" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="31" font-weight="600" fill="#FFFFFF" text-anchor="middle">aes</text>
+  <text x="314" y="508" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="37" font-weight="600" fill="#1B2A4A" text-anchor="end">2 · Estéticas</text>
+  <polygon points="330,450 660,450 716,400 386,400" fill="#4A63A0" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <text x="523" y="436" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="31" font-weight="600" fill="#FFFFFF" text-anchor="middle">geom</text>
+  <text x="314" y="438" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="37" font-weight="600" fill="#1B2A4A" text-anchor="end">3 · Geometrías</text>
+  <polygon points="330,380 660,380 716,330 386,330" fill="#C9D6EE" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <text x="523" y="366" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="31" font-weight="600" fill="#1B2A4A" text-anchor="middle">stat</text>
+  <text x="314" y="368" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="37" font-weight="600" fill="#1B2A4A" text-anchor="end">4 · Estadísticas</text>
+  <polygon points="330,310 660,310 716,260 386,260" fill="#C9D6EE" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <text x="523" y="296" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="31" font-weight="600" fill="#1B2A4A" text-anchor="middle">scale</text>
+  <text x="314" y="298" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="37" font-weight="600" fill="#1B2A4A" text-anchor="end">5 · Escalas</text>
+  <polygon points="330,240 660,240 716,190 386,190" fill="#C9D6EE" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <text x="523" y="226" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="31" font-weight="600" fill="#1B2A4A" text-anchor="middle">coord</text>
+  <text x="314" y="228" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="37" font-weight="600" fill="#1B2A4A" text-anchor="end">6 · Coordenadas</text>
+  <polygon points="330,170 660,170 716,120 386,120" fill="#C9D6EE" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <text x="523" y="156" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="31" font-weight="600" fill="#1B2A4A" text-anchor="middle">facet</text>
+  <text x="314" y="158" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="37" font-weight="600" fill="#1B2A4A" text-anchor="end">7 · Facetas</text>
+  <polygon points="330,100 660,100 716,50 386,50" fill="#E6D9BD" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
+  <text x="523" y="86" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="31" font-weight="600" fill="#1B2A4A" text-anchor="middle">theme</text>
+  <text x="314" y="88" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="37" font-weight="600" fill="#1B2A4A" text-anchor="end">8 · Tema</text>
+  <path d="M736,590 q16,0 16,-16 L752,511 q0,-16 16,-16 q-16,0 -16,-16 L752,416 q0,-16 -16,-16" fill="none" stroke="#B6985E" stroke-width="3.5"/>
+  <text font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="35" font-weight="600" fill="#7A6230"><tspan x="780" y="487">la gráfica</tspan><tspan x="780" y="527">mínima</tspan></text>
+</svg>

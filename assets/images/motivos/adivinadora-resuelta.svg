@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 300" role="img"
+     aria-label="Una bola de cristal sobre su base, con el resultado menos uno dentro">
+
+  <!-- Ilustración PROPIA del curso, dibujada aquí en la paleta institucional.
+       Va en la diapositiva del resultado: la bola ya muestra el −1.
+
+       Es la hermana de adivinadora.svg, que lleva un `?` para la práctica de
+       antes. Si se cambia una, cambiar la otra: son la misma figura en dos
+       momentos. -->
+
+  <style>
+    .cristal { fill: #E3EDF9; stroke: #276DC3; stroke-width: 3; }
+    .brillo  { fill: #FFFFFF; opacity: 0.75; }
+    .base    { fill: #293E6B; }
+    .realce  { fill: #A7781B; }
+    .chispa  { fill: #D5A034; }
+    .mono    { font-family: "Consolas", "DejaVu Sans Mono", monospace; }
+  </style>
+
+  <!-- Base -->
+  <path class="base" d="M 128 250 L 252 250 L 232 214 L 148 214 Z"/>
+  <rect class="realce" x="120" y="250" width="140" height="16" rx="8"/>
+
+  <!-- Bola -->
+  <circle class="cristal" cx="190" cy="150" r="82"/>
+  <ellipse class="brillo" cx="163" cy="122" rx="24" ry="16" transform="rotate(-28 163 122)"/>
+
+  <!-- El signo, en el azul de R -->
+  <text class="mono" x="190" y="172" font-size="64" font-weight="700"
+        fill="#276DC3" text-anchor="middle">−1</text>
+
+  <!-- Chispas: la misma familia cálida del resto de la identidad -->
+  <circle class="chispa" cx="86"  cy="96"  r="6"/>
+  <circle class="chispa" cx="300" cy="120" r="5"/>
+  <circle class="chispa" cx="104" cy="188" r="4"/>
+  <circle class="chispa" cx="292" cy="200" r="6"/>
+  <circle class="chispa" cx="190" cy="42"  r="5"/>
+</svg>

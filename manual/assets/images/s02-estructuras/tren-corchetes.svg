@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Un tren y sus pasajeros: por qué la lista usa doble corchete</title>
+  <desc id="descripcion">Arriba, el data frame datos_casos es un tren de tres vagones, ID_Caso, Edad y Hospitalizado, y cada vagón lleva tres pasajeros: hay filas. datos_casos["Edad"] devuelve un tren más corto; datos_casos[, "Edad"], con la coma, baja a los pasajeros 25, 42 y 31. Abajo, la lista investigacion_brote es un tren de cuatro vagones, Nombre, Datos, Contactos y Activo, que llevan cosas distintas: no hay filas. investigacion_brote["Nombre"] devuelve un tren más corto; investigacion_brote[["Nombre"]], con doble corchete, baja al pasajero "Nuevo brote". Dibujo propio del curso; la analogía del tren es de Hadley Wickham, Advanced R, 2.ª ed., sección 4.3.1.</desc>
+  <text x="0" y="30" xml:space="preserve"><tspan font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="28" font-weight="600" fill="#1B2A4A">datos_casos</tspan><tspan dx="14" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#5B6478">· data frame</tspan></text>
+  <g transform="translate(0 48) scale(1)" fill="#293E6B">
+  <rect x="2" y="28" width="62" height="48" rx="12"/>
+  <rect x="50" y="6" width="42" height="70" rx="5"/>
+  <rect x="46" y="0" width="46" height="9" rx="3"/>
+  <rect x="14" y="12" width="14" height="18" rx="2"/>
+  <rect x="58" y="16" width="26" height="22" rx="3" fill="#E3EDF9"/>
+  <circle cx="9" cy="46" r="4" fill="#E3EDF9"/>
+  <circle cx="18" cy="85" r="9" fill="#1B2A4A"/>
+  <circle cx="44" cy="85" r="9" fill="#1B2A4A"/>
+  <circle cx="72" cy="85" r="9" fill="#1B2A4A"/>
+  </g>
+  <line x1="92" y1="110" x2="104" y2="110" stroke="#293E6B" stroke-width="5"/>
+  <rect x="104" y="48" width="172" height="76" rx="8" fill="#E3EDF9" stroke="#293E6B" stroke-width="3"/>
+  <text x="190" y="77" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#1B2A4A" text-anchor="middle" font-weight="600" xml:space="preserve">ID_Caso</text>
+  <circle cx="156" cy="94.5" r="6.5" fill="#276DC3"/>
+  <path d="M145,117 V110 Q145,103 152,103 H160 Q167,103 167,110 V117 Z" fill="#276DC3"/>
+  <circle cx="190" cy="94.5" r="6.5" fill="#276DC3"/>
+  <path d="M179,117 V110 Q179,103 186,103 H194 Q201,103 201,110 V117 Z" fill="#276DC3"/>
+  <circle cx="224" cy="94.5" r="6.5" fill="#276DC3"/>
+  <path d="M213,117 V110 Q213,103 220,103 H228 Q235,103 235,110 V117 Z" fill="#276DC3"/>
+  <circle cx="128" cy="133" r="9" fill="#1B2A4A"/>
+  <circle cx="252" cy="133" r="9" fill="#1B2A4A"/>
+  <line x1="276" y1="110" x2="288" y2="110" stroke="#293E6B" stroke-width="5"/>
+  <rect x="288" y="48" width="172" height="76" rx="8" fill="#FBEFD2" stroke="#A7781B" stroke-width="3.5"/>
+  <text x="374" y="77" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#1B2A4A" text-anchor="middle" font-weight="600" xml:space="preserve">Edad</text>
+  <circle cx="340" cy="94.5" r="6.5" fill="#D5A034"/>
+  <path d="M329,117 V110 Q329,103 336,103 H344 Q351,103 351,110 V117 Z" fill="#D5A034"/>
+  <circle cx="374" cy="94.5" r="6.5" fill="#D5A034"/>
+  <path d="M363,117 V110 Q363,103 370,103 H378 Q385,103 385,110 V117 Z" fill="#D5A034"/>
+  <circle cx="408" cy="94.5" r="6.5" fill="#D5A034"/>
+  <path d="M397,117 V110 Q397,103 404,103 H412 Q419,103 419,110 V117 Z" fill="#D5A034"/>
+  <circle cx="312" cy="133" r="9" fill="#1B2A4A"/>
+  <circle cx="436" cy="133" r="9" fill="#1B2A4A"/>
+  <line x1="460" y1="110" x2="472" y2="110" stroke="#293E6B" stroke-width="5"/>
+  <rect x="472" y="48" width="172" height="76" rx="8" fill="#E3EDF9" stroke="#293E6B" stroke-width="3"/>
+  <text x="558" y="77" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#1B2A4A" text-anchor="middle" font-weight="600" xml:space="preserve">Hospitalizado</text>
+  <circle cx="524" cy="94.5" r="6.5" fill="#276DC3"/>
+  <path d="M513,117 V110 Q513,103 520,103 H528 Q535,103 535,110 V117 Z" fill="#276DC3"/>
+  <circle cx="558" cy="94.5" r="6.5" fill="#276DC3"/>
+  <path d="M547,117 V110 Q547,103 554,103 H562 Q569,103 569,110 V117 Z" fill="#276DC3"/>
+  <circle cx="592" cy="94.5" r="6.5" fill="#276DC3"/>
+  <path d="M581,117 V110 Q581,103 588,103 H596 Q603,103 603,110 V117 Z" fill="#276DC3"/>
+  <circle cx="496" cy="133" r="9" fill="#1B2A4A"/>
+  <circle cx="620" cy="133" r="9" fill="#1B2A4A"/>
+  <text x="0" y="170" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#3D5583" text-anchor="start" xml:space="preserve">cada vagón lleva 3 pasajeros: hay filas</text>
+  <line x1="686" y1="8" x2="686" y2="146" stroke="#D9DEE7" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="830" y="30" font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="28" fill="#1B2A4A" text-anchor="middle" xml:space="preserve">["Edad"]</text>
+  <g transform="translate(701.2 63.2) scale(0.8)" fill="#293E6B">
+  <rect x="2" y="28" width="62" height="48" rx="12"/>
+  <rect x="50" y="6" width="42" height="70" rx="5"/>
+  <rect x="46" y="0" width="46" height="9" rx="3"/>
+  <rect x="14" y="12" width="14" height="18" rx="2"/>
+  <rect x="58" y="16" width="26" height="22" rx="3" fill="#E3EDF9"/>
+  <circle cx="9" cy="46" r="4" fill="#E3EDF9"/>
+  <circle cx="18" cy="85" r="9" fill="#1B2A4A"/>
+  <circle cx="44" cy="85" r="9" fill="#1B2A4A"/>
+  <circle cx="72" cy="85" r="9" fill="#1B2A4A"/>
+  </g>
+  <line x1="774.8" y1="110" x2="786.8" y2="110" stroke="#293E6B" stroke-width="5"/>
+  <rect x="786.8" y="48" width="172" height="76" rx="8" fill="#FBEFD2" stroke="#A7781B" stroke-width="3.5"/>
+  <text x="872.8" y="77" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#1B2A4A" text-anchor="middle" font-weight="600" xml:space="preserve">Edad</text>
+  <circle cx="838.8" cy="94.5" r="6.5" fill="#D5A034"/>
+  <path d="M827.8,117 V110 Q827.8,103 834.8,103 H842.8 Q849.8,103 849.8,110 V117 Z" fill="#D5A034"/>
+  <circle cx="872.8" cy="94.5" r="6.5" fill="#D5A034"/>
+  <path d="M861.8,117 V110 Q861.8,103 868.8,103 H876.8 Q883.8,103 883.8,110 V117 Z" fill="#D5A034"/>
+  <circle cx="906.8" cy="94.5" r="6.5" fill="#D5A034"/>
+  <path d="M895.8,117 V110 Q895.8,103 902.8,103 H910.8 Q917.8,103 917.8,110 V117 Z" fill="#D5A034"/>
+  <circle cx="810.8" cy="133" r="9" fill="#1B2A4A"/>
+  <circle cx="934.8" cy="133" r="9" fill="#1B2A4A"/>
+  <text x="830" y="170" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#3D5583" text-anchor="middle" xml:space="preserve">un tren más corto</text>
+  <text x="1075" y="30" font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="28" fill="#1B2A4A" text-anchor="middle" xml:space="preserve">[<tspan fill="#A7781B" font-weight="700">, </tspan>"Edad"]</text>
+  <circle cx="1011" cy="63.4" r="11.4" fill="#D5A034"/>
+  <path d="M991.8,102.8 V90.5 Q991.8,78.2 1004,78.2 H1018 Q1030.2,78.2 1030.2,90.5 V102.8 Z" fill="#D5A034"/>
+  <text x="1011" y="134" font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="26" fill="#1B2A4A" text-anchor="middle" xml:space="preserve">25</text>
+  <circle cx="1075" cy="63.4" r="11.4" fill="#D5A034"/>
+  <path d="M1055.8,102.8 V90.5 Q1055.8,78.2 1068,78.2 H1082 Q1094.2,78.2 1094.2,90.5 V102.8 Z" fill="#D5A034"/>
+  <text x="1075" y="134" font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="26" fill="#1B2A4A" text-anchor="middle" xml:space="preserve">42</text>
+  <circle cx="1139" cy="63.4" r="11.4" fill="#D5A034"/>
+  <path d="M1119.8,102.8 V90.5 Q1119.8,78.2 1132,78.2 H1146 Q1158.2,78.2 1158.2,90.5 V102.8 Z" fill="#D5A034"/>
+  <text x="1139" y="134" font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="26" fill="#1B2A4A" text-anchor="middle" xml:space="preserve">31</text>
+  <text x="1075" y="170" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#3D5583" text-anchor="middle" xml:space="preserve">los pasajeros</text>
+  <line x1="0" y1="190" x2="1200" y2="190" stroke="#D9DEE7" stroke-width="2"/>
+  <text x="0" y="230" xml:space="preserve"><tspan font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="28" font-weight="600" fill="#1B2A4A">investigacion_brote</tspan><tspan dx="14" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#5B6478">· lista</tspan></text>
+  <g transform="translate(0 248) scale(1)" fill="#293E6B">
+  <rect x="2" y="28" width="62" height="48" rx="12"/>
+  <rect x="50" y="6" width="42" height="70" rx="5"/>
+  <rect x="46" y="0" width="46" height="9" rx="3"/>
+  <rect x="14" y="12" width="14" height="18" rx="2"/>
+  <rect x="58" y="16" width="26" height="22" rx="3" fill="#E3EDF9"/>
+  <circle cx="9" cy="46" r="4" fill="#E3EDF9"/>
+  <circle cx="18" cy="85" r="9" fill="#1B2A4A"/>
+  <circle cx="44" cy="85" r="9" fill="#1B2A4A"/>
+  <circle cx="72" cy="85" r="9" fill="#1B2A4A"/>
+  </g>
+  <line x1="92" y1="310" x2="104" y2="310" stroke="#293E6B" stroke-width="5"/>
+  <rect x="104" y="248" width="132" height="76" rx="8" fill="#FBEFD2" stroke="#A7781B" stroke-width="3.5"/>
+  <text x="170" y="277" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#1B2A4A" text-anchor="middle" font-weight="600" xml:space="preserve">Nombre</text>
+  <circle cx="170" cy="294.5" r="6.5" fill="#D5A034"/>
+  <path d="M159,317 V310 Q159,303 166,303 H174 Q181,303 181,310 V317 Z" fill="#D5A034"/>
+  <circle cx="128" cy="333" r="9" fill="#1B2A4A"/>
+  <circle cx="212" cy="333" r="9" fill="#1B2A4A"/>
+  <line x1="236" y1="310" x2="248" y2="310" stroke="#293E6B" stroke-width="5"/>
+  <rect x="248" y="248" width="132" height="76" rx="8" fill="#E3EDF9" stroke="#293E6B" stroke-width="3"/>
+  <text x="314" y="277" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#1B2A4A" text-anchor="middle" font-weight="600" xml:space="preserve">Datos</text>
+  <rect x="295.5" y="288" width="11" height="8" fill="#276DC3" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="308.5" y="288" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="321.5" y="288" width="11" height="8" fill="#C8D3E6" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="295.5" y="298" width="11" height="8" fill="#276DC3" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="308.5" y="298" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="321.5" y="298" width="11" height="8" fill="#C8D3E6" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="295.5" y="308" width="11" height="8" fill="#276DC3" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="308.5" y="308" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="321.5" y="308" width="11" height="8" fill="#C8D3E6" stroke="#293E6B" stroke-width="1.2"/>
+  <circle cx="272" cy="333" r="9" fill="#1B2A4A"/>
+  <circle cx="356" cy="333" r="9" fill="#1B2A4A"/>
+  <line x1="380" y1="310" x2="392" y2="310" stroke="#293E6B" stroke-width="5"/>
+  <rect x="392" y="248" width="132" height="76" rx="8" fill="#E3EDF9" stroke="#293E6B" stroke-width="3"/>
+  <text x="458" y="277" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#1B2A4A" text-anchor="middle" font-weight="600" xml:space="preserve">Contactos</text>
+  <rect x="439.5" y="288" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="452.5" y="288" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="465.5" y="288" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="439.5" y="298" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="452.5" y="298" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="465.5" y="298" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="439.5" y="308" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="452.5" y="308" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <rect x="465.5" y="308" width="11" height="8" fill="#8FB3E0" stroke="#293E6B" stroke-width="1.2"/>
+  <circle cx="416" cy="333" r="9" fill="#1B2A4A"/>
+  <circle cx="500" cy="333" r="9" fill="#1B2A4A"/>
+  <line x1="524" y1="310" x2="536" y2="310" stroke="#293E6B" stroke-width="5"/>
+  <rect x="536" y="248" width="132" height="76" rx="8" fill="#E3EDF9" stroke="#293E6B" stroke-width="3"/>
+  <text x="602" y="277" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#1B2A4A" text-anchor="middle" font-weight="600" xml:space="preserve">Activo</text>
+  <circle cx="602" cy="294.5" r="6.5" fill="#276DC3"/>
+  <path d="M591,317 V310 Q591,303 598,303 H606 Q613,303 613,310 V317 Z" fill="#276DC3"/>
+  <circle cx="560" cy="333" r="9" fill="#1B2A4A"/>
+  <circle cx="644" cy="333" r="9" fill="#1B2A4A"/>
+  <text x="0" y="370" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#3D5583" text-anchor="start" xml:space="preserve">cada vagón lleva algo distinto: no hay filas</text>
+  <line x1="686" y1="208" x2="686" y2="346" stroke="#D9DEE7" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="830" y="230" font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="28" fill="#1B2A4A" text-anchor="middle" xml:space="preserve">["Nombre"]</text>
+  <g transform="translate(721.2 263.2) scale(0.8)" fill="#293E6B">
+  <rect x="2" y="28" width="62" height="48" rx="12"/>
+  <rect x="50" y="6" width="42" height="70" rx="5"/>
+  <rect x="46" y="0" width="46" height="9" rx="3"/>
+  <rect x="14" y="12" width="14" height="18" rx="2"/>
+  <rect x="58" y="16" width="26" height="22" rx="3" fill="#E3EDF9"/>
+  <circle cx="9" cy="46" r="4" fill="#E3EDF9"/>
+  <circle cx="18" cy="85" r="9" fill="#1B2A4A"/>
+  <circle cx="44" cy="85" r="9" fill="#1B2A4A"/>
+  <circle cx="72" cy="85" r="9" fill="#1B2A4A"/>
+  </g>
+  <line x1="794.8" y1="310" x2="806.8" y2="310" stroke="#293E6B" stroke-width="5"/>
+  <rect x="806.8" y="248" width="132" height="76" rx="8" fill="#FBEFD2" stroke="#A7781B" stroke-width="3.5"/>
+  <text x="872.8" y="277" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#1B2A4A" text-anchor="middle" font-weight="600" xml:space="preserve">Nombre</text>
+  <circle cx="872.8" cy="294.5" r="6.5" fill="#D5A034"/>
+  <path d="M861.8,317 V310 Q861.8,303 868.8,303 H876.8 Q883.8,303 883.8,310 V317 Z" fill="#D5A034"/>
+  <circle cx="830.8" cy="333" r="9" fill="#1B2A4A"/>
+  <circle cx="914.8" cy="333" r="9" fill="#1B2A4A"/>
+  <text x="830" y="370" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#3D5583" text-anchor="middle" xml:space="preserve">un tren más corto</text>
+  <text x="1075" y="230" font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="28" fill="#1B2A4A" text-anchor="middle" xml:space="preserve"><tspan fill="#A7781B" font-weight="700">[</tspan>["Nombre"]<tspan fill="#A7781B" font-weight="700">]</tspan></text>
+  <circle cx="1075" cy="263.4" r="11.4" fill="#D5A034"/>
+  <path d="M1055.8,302.8 V290.5 Q1055.8,278.2 1068,278.2 H1082 Q1094.2,278.2 1094.2,290.5 V302.8 Z" fill="#D5A034"/>
+  <text x="1075" y="334" font-family="&apos;JetBrains Mono&apos;, Consolas, &apos;SF Mono&apos;, Menlo, monospace" font-size="26" fill="#1B2A4A" text-anchor="middle" xml:space="preserve">"Nuevo brote"</text>
+  <text x="1075" y="370" font-family="&apos;Source Sans 3&apos;, &apos;Segoe UI&apos;, &apos;Helvetica Neue&apos;, Arial, sans-serif" font-size="24" fill="#3D5583" text-anchor="middle" xml:space="preserve">el pasajero</text>
+</svg>

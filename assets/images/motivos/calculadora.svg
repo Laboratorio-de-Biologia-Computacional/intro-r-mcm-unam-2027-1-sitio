@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 300" role="img"
+     aria-label="Una calculadora cuya pantalla muestra la operación 3 + 4 y el resultado 7, con el prompt de R">
+
+  <!-- Ilustración PROPIA del curso. No es de terceros: se dibujó aquí, en la
+       paleta institucional, para no depender de una imagen ajena ni de su
+       licencia. Azul UNAM #293E6B, azul de R #276DC3 y la familia cálida del
+       tono 40 que usa el resto de la identidad.
+
+       La pantalla muestra `3 + 4` y `[1] 7`, que es exactamente el ejemplo de
+       la diapositiva: la figura no decora, repite lo que se está diciendo. -->
+
+  <style>
+    .cuerpo   { fill: #293E6B; }
+    .pantalla { fill: #E3EDF9; }
+    .tecla    { fill: #3D5583; }
+    .tecla-op { fill: #A7781B; }
+    .igual    { fill: #276DC3; }
+    .mono     { font-family: "Consolas", "DejaVu Sans Mono", monospace; }
+  </style>
+
+  <!-- Carcasa -->
+  <rect class="cuerpo" x="60" y="14" width="260" height="272" rx="22"/>
+
+  <!-- Pantalla -->
+  <rect class="pantalla" x="84" y="38" width="212" height="72" rx="8"/>
+  <text class="mono" x="98" y="66" font-size="19" fill="#276DC3">&gt; 3 + 4</text>
+  <text class="mono" x="98" y="96" font-size="19" fill="#1B2A4A">[1] 7</text>
+
+  <!-- Teclas: cuatro columnas por cuatro filas -->
+  <g>
+    <rect class="tecla" x="88"  y="130" width="46" height="34" rx="7"/>
+    <rect class="tecla" x="144" y="130" width="46" height="34" rx="7"/>
+    <rect class="tecla" x="200" y="130" width="46" height="34" rx="7"/>
+    <rect class="tecla-op" x="256" y="130" width="40" height="34" rx="7"/>
+
+    <rect class="tecla" x="88"  y="174" width="46" height="34" rx="7"/>
+    <rect class="tecla" x="144" y="174" width="46" height="34" rx="7"/>
+    <rect class="tecla" x="200" y="174" width="46" height="34" rx="7"/>
+    <rect class="tecla-op" x="256" y="174" width="40" height="34" rx="7"/>
+
+    <rect class="tecla" x="88"  y="218" width="46" height="34" rx="7"/>
+    <rect class="tecla" x="144" y="218" width="46" height="34" rx="7"/>
+    <rect class="tecla" x="200" y="218" width="46" height="34" rx="7"/>
+    <rect class="igual" x="256" y="218" width="40" height="34" rx="7"/>
+  </g>
+
+  <!-- Los signos de las teclas de operación, en la columna cálida -->
+  <text class="mono" x="271" y="154" font-size="20" fill="#FFFFFF">+</text>
+  <text class="mono" x="271" y="198" font-size="20" fill="#FFFFFF">−</text>
+  <text class="mono" x="270" y="242" font-size="20" fill="#FFFFFF">=</text>
+</svg>
