@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 470" width="1180" height="470" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Una gráfica es una traducción</title>
+  <desc id="descripcion">A la izquierda, cuatro filas de mpg con las columnas displ, hwy y drv. Al centro, aes(x = displ, y = hwy, color = drv). A la derecha, los cuatro autos como puntos: displ decide la posición horizontal, hwy la vertical y drv el color. Dibujo propio del curso.</desc>
+  <text x="185" y="42" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#1B2A4A" text-anchor="middle">Datos</text>
+  <text x="540" y="42" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#1B2A4A" text-anchor="middle">Estéticas</text>
+  <text x="935" y="42" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#1B2A4A" text-anchor="middle">Geometría</text>
+  <rect x="20" y="70" width="110" height="52" fill="#DCE8F7" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="75.0" y="105" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="700" fill="#276DC3" text-anchor="middle">displ</text>
+  <rect x="20" y="122" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="75.0" y="157" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">1.8</text>
+  <rect x="20" y="174" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="75.0" y="209" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">1.6</text>
+  <rect x="20" y="226" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="75.0" y="261" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">5.3</text>
+  <rect x="20" y="278" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="75.0" y="313" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">5.7</text>
+  <rect x="130" y="70" width="110" height="52" fill="#F3EDE1" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="185.0" y="105" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="700" fill="#7A6230" text-anchor="middle">hwy</text>
+  <rect x="130" y="122" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="185.0" y="157" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">29</text>
+  <rect x="130" y="174" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="185.0" y="209" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">33</text>
+  <rect x="130" y="226" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="185.0" y="261" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">15</text>
+  <rect x="130" y="278" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="185.0" y="313" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">18</text>
+  <rect x="240" y="70" width="110" height="52" fill="#DDEEE3" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="295.0" y="105" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="700" fill="#2C6E49" text-anchor="middle">drv</text>
+  <rect x="240" y="122" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="295.0" y="157" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">f</text>
+  <rect x="240" y="174" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="295.0" y="209" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">f</text>
+  <rect x="240" y="226" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="295.0" y="261" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">r</text>
+  <rect x="240" y="278" width="110" height="52" fill="#FFFFFF" stroke="#5A6373" stroke-width="1.5"/>
+  <text x="295.0" y="313" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="25" font-weight="400" fill="#1B2A4A" text-anchor="middle">4</text>
+  <text x="185" y="366" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" fill="#5A6373" text-anchor="middle">cuatro filas de mpg</text>
+  <path d="M362,200 L388,200" stroke="#B6985E" stroke-width="5" fill="none"/>
+  <path d="M384,188 L402,200 L384,212 Z" fill="#B6985E"/>
+  <rect x="410" y="100" width="262" height="200" rx="8" fill="#F8F9FB" stroke="#276DC3" stroke-width="1.5"/>
+  <rect x="410" y="100" width="6" height="200" fill="#276DC3"/>
+  <text x="430" y="150" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="23" fill="#1B2A4A">aes(x = <tspan fill="#276DC3" font-weight="700">displ</tspan>,</text>
+  <text x="485" y="202" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="23" fill="#1B2A4A">y = <tspan fill="#7A6230" font-weight="700">hwy</tspan>,</text>
+  <text x="485" y="254" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="23" fill="#1B2A4A">color = <tspan fill="#2C6E49" font-weight="700">drv</tspan>)</text>
+  <path d="M682,200 L708,200" stroke="#B6985E" stroke-width="5" fill="none"/>
+  <path d="M704,188 L722,200 L704,212 Z" fill="#B6985E"/>
+  <rect x="790" y="80" width="290" height="300" fill="#EBEBEB"/>
+  <line x1="842.7" y1="80" x2="842.7" y2="380" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="842.7" y="406" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" fill="#5A6373" text-anchor="middle">2</text>
+  <line x1="948.2" y1="80" x2="948.2" y2="380" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="948.2" y="406" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" fill="#5A6373" text-anchor="middle">4</text>
+  <line x1="1053.6" y1="80" x2="1053.6" y2="380" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="1053.6" y="406" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" fill="#5A6373" text-anchor="middle">6</text>
+  <line x1="790" y1="322.3" x2="1080" y2="322.3" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="780" y="329.3" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" fill="#5A6373" text-anchor="end">15</text>
+  <line x1="790" y1="206.9" x2="1080" y2="206.9" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="780" y="213.9" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" fill="#5A6373" text-anchor="end">25</text>
+  <line x1="790" y1="91.5" x2="1080" y2="91.5" stroke="#FFFFFF" stroke-width="2"/>
+  <text x="780" y="98.5" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="400" fill="#5A6373" text-anchor="end">35</text>
+  <circle cx="832.2" cy="160.8" r="11" fill="#00BA38" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="821.6" cy="114.6" r="11" fill="#00BA38" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="1016.7" cy="322.3" r="11" fill="#619CFF" stroke="#FFFFFF" stroke-width="1.5"/>
+  <circle cx="1037.8" cy="287.7" r="11" fill="#F8766D" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="935.0" y="438" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="24" font-weight="700" fill="#276DC3" text-anchor="middle">displ</text>
+  <text x="0" y="0" transform="translate(730,230.0) rotate(-90)" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="24" font-weight="700" fill="#7A6230" text-anchor="middle">hwy</text>
+  <text x="1100" y="150" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="22" font-weight="700" fill="#2C6E49" text-anchor="start">drv</text>
+  <circle cx="1110" cy="173" r="9" fill="#F8766D"/>
+  <text x="1128" y="180" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="21" font-weight="400" fill="#1B2A4A" text-anchor="start">4</text>
+  <circle cx="1110" cy="205" r="9" fill="#00BA38"/>
+  <text x="1128" y="212" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="21" font-weight="400" fill="#1B2A4A" text-anchor="start">f</text>
+  <circle cx="1110" cy="237" r="9" fill="#619CFF"/>
+  <text x="1128" y="244" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="21" font-weight="400" fill="#1B2A4A" text-anchor="start">r</text>
+</svg>

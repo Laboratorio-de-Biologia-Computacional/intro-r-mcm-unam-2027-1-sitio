@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 420" width="1180" height="420" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Estéticas de uso común, con su nombre en aes()</title>
+  <desc id="descripcion">Dos grupos. En los puntos: x e y deciden la posición, shape la forma y size el tamaño. En puntos y líneas: color el color, linewidth el grosor y linetype el tipo de línea. Cada una con tres o cuatro muestras. Dibujo propio del curso.</desc>
+  <text x="20" y="38" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="700" fill="#7A6230" text-anchor="start">en los puntos</text>
+  <line x1="20" y1="52" x2="570" y2="52" stroke="#B6985E" stroke-width="2"/>
+  <text x="610" y="38" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="700" fill="#7A6230" text-anchor="start">en puntos y líneas</text>
+  <line x1="610" y1="52" x2="1160" y2="52" stroke="#B6985E" stroke-width="2"/>
+  <rect x="20" y="70" width="550" height="100" rx="10" fill="#F8F9FB" stroke="#E9EDF5" stroke-width="2"/>
+  <text x="40" y="118" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="30" font-weight="700" fill="#276DC3" text-anchor="start">x, y</text>
+  <text x="40" y="150" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" fill="#5A6373" text-anchor="start">posición</text>
+  <path d="M270,152 L530,152" stroke="#5A6373" stroke-width="2.5"/>
+  <path d="M270,152 L270,82" stroke="#5A6373" stroke-width="2.5"/>
+  <circle cx="320" cy="132" r="9" fill="#293E6B"/>
+  <circle cx="390" cy="116" r="9" fill="#293E6B"/>
+  <circle cx="455" cy="98" r="9" fill="#293E6B"/>
+  <circle cx="510" cy="124" r="9" fill="#293E6B"/>
+  <rect x="20" y="185" width="550" height="100" rx="10" fill="#F8F9FB" stroke="#E9EDF5" stroke-width="2"/>
+  <text x="40" y="233" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="30" font-weight="700" fill="#276DC3" text-anchor="start">shape</text>
+  <text x="40" y="265" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" fill="#5A6373" text-anchor="start">forma</text>
+  <circle cx="290" cy="235" r="19" fill="#293E6B"/>
+  <path d="M365,214 L387,252 L343,252 Z" fill="#293E6B"/>
+  <rect x="422" y="218" width="34" height="34" fill="#293E6B"/>
+  <path d="M512,213 L534,235 L512,257 L490,235 Z" fill="#293E6B"/>
+  <rect x="20" y="300" width="550" height="100" rx="10" fill="#F8F9FB" stroke="#E9EDF5" stroke-width="2"/>
+  <text x="40" y="348" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="30" font-weight="700" fill="#276DC3" text-anchor="start">size</text>
+  <text x="40" y="380" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" fill="#5A6373" text-anchor="start">tamaño</text>
+  <circle cx="280" cy="350" r="5" fill="#293E6B"/>
+  <circle cx="360" cy="350" r="10" fill="#293E6B"/>
+  <circle cx="440" cy="350" r="15" fill="#293E6B"/>
+  <circle cx="520" cy="350" r="21" fill="#293E6B"/>
+  <rect x="610" y="70" width="550" height="100" rx="10" fill="#F8F9FB" stroke="#E9EDF5" stroke-width="2"/>
+  <text x="630" y="118" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="30" font-weight="700" fill="#276DC3" text-anchor="start">color</text>
+  <text x="630" y="150" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" fill="#5A6373" text-anchor="start">color</text>
+  <circle cx="875" cy="120" r="20" fill="#F8766D"/>
+  <circle cx="953" cy="120" r="20" fill="#7CAE00"/>
+  <circle cx="1031" cy="120" r="20" fill="#00BFC4"/>
+  <circle cx="1109" cy="120" r="20" fill="#C77CFF"/>
+  <rect x="610" y="185" width="550" height="100" rx="10" fill="#F8F9FB" stroke="#E9EDF5" stroke-width="2"/>
+  <text x="630" y="233" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="30" font-weight="700" fill="#276DC3" text-anchor="start">linewidth</text>
+  <text x="630" y="265" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" fill="#5A6373" text-anchor="start">grosor</text>
+  <line x1="850" y1="211" x2="1140" y2="211" stroke="#293E6B" stroke-width="2" stroke-linecap="round"/>
+  <line x1="850" y1="235" x2="1140" y2="235" stroke="#293E6B" stroke-width="5" stroke-linecap="round"/>
+  <line x1="850" y1="259" x2="1140" y2="259" stroke="#293E6B" stroke-width="9" stroke-linecap="round"/>
+  <rect x="610" y="300" width="550" height="100" rx="10" fill="#F8F9FB" stroke="#E9EDF5" stroke-width="2"/>
+  <text x="630" y="348" font-family="'JetBrains Mono', Consolas, 'Courier New', monospace" font-size="30" font-weight="700" fill="#276DC3" text-anchor="start">linetype</text>
+  <text x="630" y="380" font-family="'Source Sans 3', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" fill="#5A6373" text-anchor="start">tipo de línea</text>
+  <line x1="850" y1="326" x2="1140" y2="326" stroke="#293E6B" stroke-width="4" stroke-linecap="round"/>
+  <line x1="850" y1="350" x2="1140" y2="350" stroke="#293E6B" stroke-width="4" stroke-linecap="round" stroke-dasharray="16 10"/>
+  <line x1="850" y1="374" x2="1140" y2="374" stroke="#293E6B" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 9"/>
+</svg>
